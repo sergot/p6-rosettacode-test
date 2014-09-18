@@ -23,6 +23,7 @@
 
 use v6;
 use HTTP::UserAgent :simple;
+use IO::Capture::Simple;
 
 class Task {
     has Int $.id;
@@ -32,6 +33,12 @@ class Task {
     method dump {
         return { :$.id, :$.title, :$.code };
     }
+}
+
+class P6Code {
+    has $.code;
+    has $.result is rw;
+    has $.time is rw;
 }
 
 my @tasks;
@@ -48,13 +55,18 @@ repeat {
         my $code;
 
         my $task_url = 'http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=' ~ clearify($_<title>);
-        say $task_url;
+        #say $task_url;
         $code = get($task_url);
 
-        my @codes = $code.match(/'<lang perl6>' (.*?) '<\/lang>'/, :i, :g).map({ ~$_[0] });
+        my @codes = $code.match(/'<lang perl6>' (.*?) '<\/lang>'/, :i, :g).map({ P6Code.new(:code(~$_[0])) });
 
-        for @codes -> $code {
-            say EVAL $code;
+        for @codes -> $p6code {
+            my $start = time;
+            $p6code.result = capture_stdout { try EVAL codify($p6code.code) };
+            my $end = time;
+            $p6code.result = 'FAIL' if $!;
+            $p6code.time = $end - $start;
+            say $p6code.perl;
         }
 
         @tasks.push: Task.new(:id($_<pageid>), :title($_<title>), :@codes);
@@ -65,5 +77,11 @@ say to-json @tasks>>.dump;
 
 sub clearify(Str $s is copy) {
     $s ~~ s:g/\s+/_/;
+    $s;
+}
+
+sub codify(Str $s is copy) {
+    $s ~~ s:g/\\n/\n/;
+    $s ~~ s:g/\\\"/\"/;
     $s;
 }
