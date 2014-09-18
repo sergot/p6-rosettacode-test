@@ -27,7 +27,7 @@ use HTTP::UserAgent :simple;
 class Task {
     has Int $.id;
     has $.title;
-    has $.code;
+    has @.codes;
 
     method dump {
         return { :$.id, :$.title, :$.code };
@@ -51,19 +51,19 @@ repeat {
         say $task_url;
         $code = get($task_url);
 
-        #say $code;
+        my @codes = $code.match(/'<lang perl6>' (.*?) '<\/lang>'/, :i, :g).map({ ~$_[0] });
 
-        if $code ~~ /\<lang \s+ perl6\>(.*)\<\/lang\>/ {
-            say $/;
+        for @codes -> $code {
+            say EVAL $code;
         }
 
-        @tasks.push: Task.new(:id($_<pageid>), :title($_<title>), :$code);
+        @tasks.push: Task.new(:id($_<pageid>), :title($_<title>), :@codes);
     }
 } while $json<query-continue><categorymembers><cmcontinue>;
 
 say to-json @tasks>>.dump;
 
 sub clearify(Str $s is copy) {
-    $s ~~ s/\s+/_/;
+    $s ~~ s:g/\s+/_/;
     $s;
 }
