@@ -43,6 +43,10 @@ repeat {
         my @codes = $code.match(/'<lang ' ['perl6' | 'Perl6'] '>' (.*?) '<\/lang>'/, :i, :g).map({ P6Code.new(:code(codify(~$_[0]))) });
 
         for @codes -> $p6code {
+            if insecure($p6code.code) {
+                $p6code.result = 'insecure';
+                last;
+            }
             my $timeout = Promise.in(10);
             my $p_result = Promise.new;
             start {
@@ -87,6 +91,11 @@ sub codify(Str $s is copy) {
     $s ~~ s:g/\\u00bb/»/; # »
     $s ~~ s:g/\\\//\//; # »
     $s;
+}
+
+sub insecure(Str $code) {
+    return True if $code ~~ /lines/;
+    False;
 }
 
 #Get all pages in the "Perl 6" category:
