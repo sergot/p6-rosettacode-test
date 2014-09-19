@@ -43,10 +43,6 @@ repeat {
         my @codes = $code.match(/'<lang ' ['perl6' | 'Perl6'] '>' (.*?) '<\/lang>'/, :i, :g).map({ P6Code.new(:code(codify(~$_[0]))) });
 
         for @codes -> $p6code {
-            say $p6code.code;
-            say '';
-            say '';
-            say '';
             my $timeout = Promise.in(10);
             my $p_result = Promise.new;
             start {
