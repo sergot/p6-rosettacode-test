@@ -29,9 +29,10 @@ class Task {
     has Int $.id;
     has $.title;
     has @.codes;
+    has $.url;
 
     method dump {
-        return { :$.id, :$.title, :$.code };
+        return { :$.id, :$.title, :$.url, codes => @.codes>>.dump };
     }
 }
 
@@ -39,6 +40,10 @@ class P6Code {
     has $.code;
     has $.result is rw;
     has $.time is rw;
+
+    method dump {
+        return { :$.code, :$.result, :$.time }
+    }
 }
 
 my @tasks;
@@ -55,24 +60,25 @@ repeat {
         my $code;
 
         my $task_url = 'http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=' ~ clearify($_<title>);
-        #say $task_url;
         $code = get($task_url);
 
-        my @codes = $code.match(/'<lang perl6>' (.*?) '<\/lang>'/, :i, :g).map({ P6Code.new(:code(codify(~$_[0]))) });
+        my @codes = $code.match(/'<lang ' ['perl6' | 'Perl6'] '>' (.*?) '<\/lang>'/, :i, :g).map({ P6Code.new(:code(codify(~$_[0]))) });
+        say @codes.elems;
 
         for @codes -> $p6code {
-            say "Running: {$p6code.code}";
             my $start = time;
             $p6code.result = capture_stdout { try EVAL $p6code.code };
             my $end = time;
-            $p6code.result = "FAIL: $!" if $!;
             $p6code.time = $end - $start;
-            my $file = open "result", :a;
-            $file.say: "{$p6code.code} : {$p6code.result};";
-            $file.close;
+            $p6code.result = "FAIL: $!" if $!;
         }
+        my $task = Task.new(:id($_<pageid>), :title($_<title>), :@codes, :url($task_url));
 
-        @tasks.push: Task.new(:id($_<pageid>), :title($_<title>), :@codes);
+        my $file = open "result.json", :a;
+        $file.say: to-json($task.dump);
+        $file.close;
+
+        @tasks.push: $task;
     }
 } while $json<query-continue><categorymembers><cmcontinue>;
 
