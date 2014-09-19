@@ -43,6 +43,10 @@ repeat {
         my @codes = $code.match(/'<lang ' ['perl6' | 'Perl6'] '>' (.*?) '<\/lang>'/, :i, :g).map({ P6Code.new(:code(codify(~$_[0]))) });
 
         for @codes -> $p6code {
+            say $p6code.code;
+            say '';
+            say '';
+            say '';
             my $timeout = Promise.in(10);
             my $p_result = Promise.new;
             start {
@@ -76,7 +80,15 @@ sub clearify(Str $s is copy) {
 sub codify(Str $s is copy) {
     $s ~~ s:g/\\n/\n/;
     $s ~~ s:g/\\t/\t/;
+    $s ~~ s:g/\\b/\b/;
+    $s ~~ s:g/\\f/\f/;
+    $s ~~ s:g/\\r/\r/;
     $s ~~ s:g/\\\"/\"/;
+    $s ~~ s:g/\\\'/\'/;
+    $s ~~ s:g/\\\\/\\/;
+
+    $s ~~ s:g/\\u00bb/»/; # »
+    $s ~~ s:g/\\\//\//; # »
     $s;
 }
 
