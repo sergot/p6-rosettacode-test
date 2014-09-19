@@ -34,6 +34,7 @@ repeat {
     $json = from-json($content);
 
     for $json<query><categorymembers>.list {
+        say "Running {$_<title>}";
         my $code;
 
         my $task_url = 'http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=' ~ clearify($_<title>);
@@ -42,10 +43,17 @@ repeat {
         my @codes = $code.match(/'<lang ' ['perl6' | 'Perl6'] '>' (.*?) '<\/lang>'/, :i, :g).map({ P6Code.new(:code(codify(~$_[0]))) });
 
         for @codes -> $p6code {
-            my $start = time;
-            $p6code.result = capture_stdout { try EVAL $p6code.code };
-            my $end = time;
-            $p6code.time = $end - $start;
+            my $timeout = Promise.in(10);
+            my $p_result = Promise.new;
+            start {
+                $p_result.keep(
+                    capture_stdout { try EVAL $p6code.code }
+                )
+            }
+            await Promise.anyof($p_result, $timeout);
+            $p6code.result = $p_result.result
+                if $p_result.status eq Kept;
+            $p6code.time = $timeout.status eq Kept ?? 'timed out' !! 'TODO';
             $p6code.result = "FAIL: $!" if $!;
         }
         my $task = Task.new(:id($_<pageid>), :title($_<title>), :@codes, :url($task_url));
@@ -58,7 +66,7 @@ repeat {
     }
 } while $json<query-continue><categorymembers><cmcontinue>;
 
-say to-json @tasks>>.dump;
+say "I'M DONE...";
 
 sub clearify(Str $s is copy) {
     $s ~~ s:g/\s+/_/;
