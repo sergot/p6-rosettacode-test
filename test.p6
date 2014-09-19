@@ -58,15 +58,18 @@ repeat {
         #say $task_url;
         $code = get($task_url);
 
-        my @codes = $code.match(/'<lang perl6>' (.*?) '<\/lang>'/, :i, :g).map({ P6Code.new(:code(~$_[0])) });
+        my @codes = $code.match(/'<lang perl6>' (.*?) '<\/lang>'/, :i, :g).map({ P6Code.new(:code(codify(~$_[0]))) });
 
         for @codes -> $p6code {
+            say "Running: {$p6code.code}";
             my $start = time;
-            $p6code.result = capture_stdout { try EVAL codify($p6code.code) };
+            $p6code.result = capture_stdout { try EVAL $p6code.code };
             my $end = time;
-            $p6code.result = 'FAIL' if $!;
+            $p6code.result = "FAIL: $!" if $!;
             $p6code.time = $end - $start;
-            say $p6code.perl;
+            my $file = open "result", :a;
+            $file.say: "{$p6code.code} : {$p6code.result};";
+            $file.close;
         }
 
         @tasks.push: Task.new(:id($_<pageid>), :title($_<title>), :@codes);
@@ -82,6 +85,7 @@ sub clearify(Str $s is copy) {
 
 sub codify(Str $s is copy) {
     $s ~~ s:g/\\n/\n/;
+    $s ~~ s:g/\\t/\t/;
     $s ~~ s:g/\\\"/\"/;
     $s;
 }
