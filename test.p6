@@ -70,6 +70,7 @@ say "I'M DONE...";
 
 sub clearify(Str $s is copy) {
     $s ~~ s:g/\s+/_/;
+    $s ~~ s:g/\+/\%2B/;
     $s;
 }
 
