@@ -1,0 +1,1275 @@
+[
+{
+  "id" : 2151,
+  "title" : "100 doors",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=100_doors",
+  "codes" : [
+    {
+      "code" : "my @doors = False xx 101;\n\n($_ = !$_ for @doors[0, * + $_ ...^ * > 100]) for 1..100;\n\nsay \"Door $_ is \", <closed open>[ @doors[$_] ] for 1..100;",
+      "result" : "Door 1 is closed\nDoor 2 is closed\nDoor 3 is closed\nDoor 4 is closed\nDoor 5 is closed\nDoor 6 is closed\nDoor 7 is closed\nDoor 8 is closed\nDoor 9 is closed\nDoor 10 is closed\nDoor 11 is closed\nDoor 12 is closed\nDoor 13 is closed\nDoor 14 is closed\nDoor 15 is closed\nDoor 16 is closed\nDoor 17 is closed\nDoor 18 is closed\nDoor 19 is closed\nDoor 20 is closed\nDoor 21 is closed\nDoor 22 is closed\nDoor 23 is closed\nDoor 24 is closed\nDoor 25 is closed\nDoor 26 is closed\nDoor 27 is closed\nDoor 28 is closed\nDoor 29 is closed\nDoor 30 is closed\nDoor 31 is closed\nDoor 32 is closed\nDoor 33 is closed\nDoor 34 is closed\nDoor 35 is closed\nDoor 36 is closed\nDoor 37 is closed\nDoor 38 is closed\nDoor 39 is closed\nDoor 40 is closed\nDoor 41 is closed\nDoor 42 is closed\nDoor 43 is closed\nDoor 44 is closed\nDoor 45 is closed\nDoor 46 is closed\nDoor 47 is closed\nDoor 48 is closed\nDoor 49 is closed\nDoor 50 is closed\nDoor 51 is closed\nDoor 52 is closed\nDoor 53 is closed\nDoor 54 is closed\nDoor 55 is closed\nDoor 56 is closed\nDoor 57 is closed\nDoor 58 is closed\nDoor 59 is closed\nDoor 60 is closed\nDoor 61 is closed\nDoor 62 is closed\nDoor 63 is closed\nDoor 64 is closed\nDoor 65 is closed\nDoor 66 is closed\nDoor 67 is closed\nDoor 68 is closed\nDoor 69 is closed\nDoor 70 is closed\nDoor 71 is closed\nDoor 72 is closed\nDoor 73 is closed\nDoor 74 is closed\nDoor 75 is closed\nDoor 76 is closed\nDoor 77 is closed\nDoor 78 is closed\nDoor 79 is closed\nDoor 80 is closed\nDoor 81 is closed\nDoor 82 is closed\nDoor 83 is closed\nDoor 84 is closed\nDoor 85 is closed\nDoor 86 is closed\nDoor 87 is closed\nDoor 88 is closed\nDoor 89 is closed\nDoor 90 is closed\nDoor 91 is closed\nDoor 92 is closed\nDoor 93 is closed\nDoor 94 is closed\nDoor 95 is closed\nDoor 96 is closed\nDoor 97 is closed\nDoor 98 is closed\nDoor 99 is closed\nDoor 100 is closed\n",
+      "time" : "TODO"
+    },
+    {
+      "code" : "say \"Door $_ is open\" for map {$^n ** 2}, 1..10;",
+      "result" : "Door 1 is open\nDoor 4 is open\nDoor 9 is open\nDoor 16 is open\nDoor 25 is open\nDoor 36 is open\nDoor 49 is open\nDoor 64 is open\nDoor 81 is open\nDoor 100 is open\n",
+      "time" : "TODO"
+    },
+    {
+      "code" : " say \"Door $_ is open\" for 1..10 X** 2;",
+      "result" : "Door 1 is open\nDoor 4 is open\nDoor 9 is open\nDoor 16 is open\nDoor 25 is open\nDoor 36 is open\nDoor 49 is open\nDoor 64 is open\nDoor 81 is open\nDoor 100 is open\n",
+      "time" : "TODO"
+    },
+    {
+      "code" : "say \"Door $_ is \", <closed open>[.sqrt == .sqrt.floor] for 1..100;",
+      "result" : "Door 1 is open\nDoor 2 is closed\nDoor 3 is closed\nDoor 4 is open\nDoor 5 is closed\nDoor 6 is closed\nDoor 7 is closed\nDoor 8 is closed\nDoor 9 is open\nDoor 10 is closed\nDoor 11 is closed\nDoor 12 is closed\nDoor 13 is closed\nDoor 14 is closed\nDoor 15 is closed\nDoor 16 is open\nDoor 17 is closed\nDoor 18 is closed\nDoor 19 is closed\nDoor 20 is closed\nDoor 21 is closed\nDoor 22 is closed\nDoor 23 is closed\nDoor 24 is closed\nDoor 25 is open\nDoor 26 is closed\nDoor 27 is closed\nDoor 28 is closed\nDoor 29 is closed\nDoor 30 is closed\nDoor 31 is closed\nDoor 32 is closed\nDoor 33 is closed\nDoor 34 is closed\nDoor 35 is closed\nDoor 36 is open\nDoor 37 is closed\nDoor 38 is closed\nDoor 39 is closed\nDoor 40 is closed\nDoor 41 is closed\nDoor 42 is closed\nDoor 43 is closed\nDoor 44 is closed\nDoor 45 is closed\nDoor 46 is closed\nDoor 47 is closed\nDoor 48 is closed\nDoor 49 is open\nDoor 50 is closed\nDoor 51 is closed\nDoor 52 is closed\nDoor 53 is closed\nDoor 54 is closed\nDoor 55 is closed\nDoor 56 is closed\nDoor 57 is closed\nDoor 58 is closed\nDoor 59 is closed\nDoor 60 is closed\nDoor 61 is closed\nDoor 62 is closed\nDoor 63 is closed\nDoor 64 is open\nDoor 65 is closed\nDoor 66 is closed\nDoor 67 is closed\nDoor 68 is closed\nDoor 69 is closed\nDoor 70 is closed\nDoor 71 is closed\nDoor 72 is closed\nDoor 73 is closed\nDoor 74 is closed\nDoor 75 is closed\nDoor 76 is closed\nDoor 77 is closed\nDoor 78 is closed\nDoor 79 is closed\nDoor 80 is closed\nDoor 81 is open\nDoor 82 is closed\nDoor 83 is closed\nDoor 84 is closed\nDoor 85 is closed\nDoor 86 is closed\nDoor 87 is closed\nDoor 88 is closed\nDoor 89 is closed\nDoor 90 is closed\nDoor 91 is closed\nDoor 92 is closed\nDoor 93 is closed\nDoor 94 is closed\nDoor 95 is closed\nDoor 96 is closed\nDoor 97 is closed\nDoor 98 is closed\nDoor 99 is closed\nDoor 100 is open\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 4938,
+  "title" : "24 game",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=24_game",
+  "codes" : [
+    {
+      "code" : "say \"Here are your digits: \", \nconstant @digits = (1..9).roll(4)\u00bb.Str;\n \ngrammar Exp24 {\n    token TOP { ^ <exp> $ { fail unless EVAL($/) == 24 } }\n    rule exp { <term>+ % <op> }\n    rule term { '(' <exp> ')' | <@digits> }\n    token op { < + - * / > }\n}\n \nwhile my $exp = prompt \"\\\n24? \" {\n    if Exp24.parse: $exp {\n\tsay \"You win :)\";\n\tlast;\n    } else {\n\tsay pick 1,\n\t'Sorry.  Try again.' xx 20,\n\t'Try harder.' xx 5,\n\t'Nope.  Not even close.' xx 2,\n\t'Are you five or something?',\n\t'Come on, you can do better than that.';\n    }\n}",
+      "result" : "FAIL: No such method 'flush' for invocant of type '<anon>'",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 4940,
+  "title" : "24 game/Solve",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=24_game/Solve",
+  "codes" : [
+    {
+      "code" : "my @digits;\nmy $amount = 4;\n\n# Get $amount digits from the user,\n# ask for more if they don't supply enough\nwhile @digits.elems < $amount {\n    @digits ,= (prompt \"Enter {$amount - @digits} digits from 1 to 9, \"\n    ~ '(repeats allowed): ').comb(/<[1..9]>/);\n}\n# Throw away any extras\n@digits = @digits[^$amount];\n\n# Generate combinations of operators\nmy @op = <+ - * />;\nmy @ops = map {my $a = $_; map {my $b = $_; map {[$a,$b,$_]}, @op}, @op}, @op;\n\n# Enough sprintf formats to cover most precedence orderings\nmy @formats = (\n    '%d %s %d %s %d %s %d',\n    '(%d %s %d) %s %d %s %d',\n    '(%d %s %d %s %d) %s %d',\n    '((%d %s %d) %s %d) %s %d',\n    '(%d %s %d) %s (%d %s %d)',\n    '%d %s (%d %s %d %s %d)',\n    '%d %s (%d %s (%d %s %d))',\n);\n\n# Brute force test the different permutations\nfor unique permutations @digits -> @p {\n    for @ops -> @o {\n        for @formats -> $format {\n            my $string = sprintf $format, @p[0], @o[0],\n                     @p[1], @o[1], @p[2], @o[2], @p[3];\n            my $result = try { eval($string) };\n            say \"$string = 24\" and last if $result and $result == 24;\n        }\n    }\n}\n\n# Perl 6 translation of Fischer-Krause ordered permutation algorithm\nsub permutations (@array) {\n    my @index = ^@array;\n    my $last = @index[*-1];\n    my (@permutations, $rev, $fwd);\n    loop {\n        push @permutations, [@array[@index]];\n        $rev = $last;\n        --$rev while $rev and @index[$rev-1] > @index[$rev];\n        return @permutations unless $rev;\n        $fwd = $rev;\n        push @index, @index.splice($rev).reverse;\n\t++$fwd while @index[$rev-1] > @index[$fwd];\n\t@index[$rev-1,$fwd] = @index[$fwd,$rev-1];\n    }\n}\n\n# Only return unique sub-arrays\nsub unique (@array) {\n    my %h = map { $_.Str => $_ }, @array;\n    %h.values;\n}\n",
+      "result" : "FAIL: Undeclared routine:\n    eval used at line 34\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 13385,
+  "title" : "9 billion names of God the integer",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=9_billion_names_of_God_the_integer",
+  "codes" : [
+    {
+      "code" : "my @todo = [1];\nmy @sums = 0;\nsub nextrow($n) {\n    for +@todo .. $n -> $l {\n        @sums[$l] = 0;\n        print $l,\"\\\r\" if $l < $n;\n        my $r = [];\n        for reverse ^$l -> $x {\n            my @x := @todo[$x];\n            if @x {\n                $r.push: @sums[$x] += @x.shift;\n            }\n            else {\n                $r.push: @sums[$x];\n            }\n        }\n        @todo.push($r);\n    }\n    @todo[$n];\n}\n\nsay \"rows:\";\nsay .fmt('%2d'), \": \", nextrow($_)[] for 1..10;\n\n\nsay \"\\\nsums:\";\nfor 23, 123, 1234, 10000 {\n    say $_, \"\\\t\", [+] nextrow($_)[];\n}",
+      "result" : "FAIL: Undeclared routine:\n    eval used at line 34\n",
+      "time" : "timed out"
+    }
+  ]
+}
+,{
+  "id" : 2663,
+  "title" : "99 Bottles of Beer",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=99_Bottles_of_Beer",
+  "codes" : [
+    {
+      "code" : "my $b = 99;\n\nsub b($b) {\n    \"$b bottle{'s'.substr($b == 1)} of beer\";\n}\n\nrepeat while --$b {\n    .say for \"&b($b) on the wall\",\n             b($b),\n             'Take one down, pass it around',\n             \"&b($b-1) on the wall\",\n             '';\n}\n",
+      "result" : "562\r563\r564\r565\r99 bottles of beer on the wall\n99 bottles of beer\nTake one down, pass it around\n98 bottles of beer on the wall\n\n98 bottles of beer on the wall\n98 bottles of beer\nTake one down, pass it around\n97 bottles of beer on the wall\n\n97 bottles of beer on the wall\n97 bottles of beer\nTake one down, pass it around\n96 bottles of beer on the wall\n\n96 bottles of beer on the wall\n96 bottles of beer\nTake one down, pass it around\n95 bottles of beer on the wall\n\n95 bottles of beer on the wall\n95 bottles of beer\nTake one down, pass it around\n94 bottles of beer on the wall\n\n94 bottles of beer on the wall\n94 bottles of beer\nTake one down, pass it around\n93 bottles of beer on the wall\n\n93 bottles of beer on the wall\n93 bottles of beer\nTake one down, pass it around\n92 bottles of beer on the wall\n\n92 bottles of beer on the wall\n92 bottles of beer\nTake one down, pass it around\n91 bottles of beer on the wall\n\n91 bottles of beer on the wall\n91 bottles of beer\nTake one down, pass it around\n90 bottles of beer on the wall\n\n90 bottles of beer on the wall\n90 bottles of beer\n566Take one down, pass it around\n\r89 bottles of beer on the wall\n\n89 bottles of beer on the wall\n89 bottles of beer\nTake one down, pass it around\n88 bottles of beer on the wall\n\n88 bottles of beer on the wall\n88 bottles of beer\nTake one down, pass it around\n87 bottles of beer on the wall\n\n87 bottles of beer on the wall\n87 bottles of beer\nTake one down, pass it around\n86 bottles of beer on the wall\n\n86 bottles of beer on the wall\n86 bottles of beer\nTake one down, pass it around\n85 bottles of beer on the wall\n\n85 bottles of beer on the wall\n85 bottles of beer\nTake one down, pass it around\n84 bottles of beer on the wall\n\n84 bottles of beer on the wall\n84 bottles of beer\nTake one down, pass it around\n83 bottles of beer on the wall\n\n83 bottles of beer on the wall\n83 bottles of beer\nTake one down, pass it around\n82 bottles of beer on the wall\n\n82 bottles of beer on the wall\n82 bottles of beer\nTake one down, pass it around\n81 bottles of beer on the wall\n\n81 bottles of beer on the wall\n81 bottles of beer\nTake one down, pass it around\n80 bottles of beer on the wall\n\n80 bottles of beer on the wall\n80 bottles of beer\nTake one down, pass it around\n79 bottles of beer on the wall\n\n79 bottles of beer on the wall\n79 bottles of beer\nTake one down, pass it around\n78 bottles of beer on the wall\n\n78 bottles of beer on the wall\n78 bottles of beer\nTake one down, pass it around\n77 bottles of beer on the wall\n\n77 bottles of beer on the wall\n77 bottles of beer\nTake one down, pass it around\n567\r76 bottles of beer on the wall\n\n76 bottles of beer on the wall\n76 bottles of beer\nTake one down, pass it around\n75 bottles of beer on the wall\n\n75 bottles of beer on the wall\n75 bottles of beer\nTake one down, pass it around\n74 bottles of beer on the wall\n\n74 bottles of beer on the wall\n74 bottles of beer\nTake one down, pass it around\n73 bottles of beer on the wall\n\n73 bottles of beer on the wall\n73 bottles of beer\nTake one down, pass it around\n72 bottles of beer on the wall\n\n72 bottles of beer on the wall\n72 bottles of beer\nTake one down, pass it around\n71 bottles of beer on the wall\n\n71 bottles of beer on the wall\n71 bottles of beer\nTake one down, pass it around\n70 bottles of beer on the wall\n\n70 bottles of beer on the wall\n70 bottles of beer\nTake one down, pass it around\n69 bottles of beer on the wall\n\n69 bottles of beer on the wall\n69 bottles of beer\nTake one down, pass it around\n68 bottles of beer on the wall\n\n68 bottles of beer on the wall\n68 bottles of beer\nTake one down, pass it around\n67 bottles of beer on the wall\n\n67 bottles of beer on the wall\n67 bottles of beer\nTake one down, pass it around\n66 bottles of beer on the wall\n\n66 bottles of beer on the wall\n66 bottles of beer\nTake one down, pass it around\n65 bottles of beer on the wall\n\n65 bottles of beer on the wall\n65 bottles of beer\nTake one down, pass it around\n64 bottles of beer on the wall\n\n64 bottles of beer on the wall\n64 bottles of beer\nTake one down, pass it around\n63 bottles of beer on the wall\n\n63 bottles of beer on the wall\n63 bottles of beer\nTake one down, pass it around\n62 bottles of beer on the wall\n\n62 bottles of beer on the wall\n62 bottles of beer\nTake one down, pass it around\n61 bottles of beer on the wall\n\n61 bottles of beer on the wall\n61 bottles of beer\nTake one down, pass it around\n60 bottles of beer on the wall\n\n60 bottles of beer on the wall\n60 bottles of beer\nTake one down, pass it around\n59 bottles of beer on the wall\n\n568\r59 bottles of beer on the wall\n59 bottles of beer\nTake one down, pass it around\n58 bottles of beer on the wall\n\n58 bottles of beer on the wall\n58 bottles of beer\nTake one down, pass it around\n57 bottles of beer on the wall\n\n57 bottles of beer on the wall\n57 bottles of beer\nTake one down, pass it around\n56 bottles of beer on the wall\n\n56 bottles of beer on the wall\n56 bottles of beer\nTake one down, pass it around\n55 bottles of beer on the wall\n\n55 bottles of beer on the wall\n55 bottles of beer\nTake one down, pass it around\n54 bottles of beer on the wall\n\n54 bottles of beer on the wall\n54 bottles of beer\nTake one down, pass it around\n53 bottles of beer on the wall\n\n53 bottles of beer on the wall\n53 bottles of beer\nTake one down, pass it around\n52 bottles of beer on the wall\n\n52 bottles of beer on the wall\n52 bottles of beer\nTake one down, pass it around\n51 bottles of beer on the wall\n\n51 bottles of beer on the wall\n51 bottles of beer\nTake one down, pass it around\n50 bottles of beer on the wall\n\n50 bottles of beer on the wall\n50 bottles of beer\nTake one down, pass it around\n49 bottles of beer on the wall\n\n49 bottles of beer on the wall\n49 bottles of beer\nTake one down, pass it around\n48 bottles of beer on the wall\n\n48 bottles of beer on the wall\n48 bottles of beer\nTake one down, pass it around\n47 bottles of beer on the wall\n\n47 bottles of beer on the wall\n47 bottles of beer\nTake one down, pass it around\n46 bottles of beer on the wall\n\n46 bottles of beer on the wall\n46 bottles of beer\nTake one down, pass it around\n45 bottles of beer on the wall\n\n45 bottles of beer on the wall\n45 bottles of beer\nTake one down, pass it around\n44 bottles of beer on the wall\n\n44 bottles of beer on the wall\n44 bottles of beer\nTake one down, pass it around\n43 bottles of beer on the wall\n\n43 bottles of beer on the wall\n43 bottles of beer\nTake one down, pass it around\n42 bottles of beer on the wall\n\n42 bottles of beer on the wall\n42 bottles of beer\nTake one down, pass it around\n41 bottles of beer on the wall\n569\n\r41 bottles of beer on the wall\n41 bottles of beer\nTake one down, pass it around\n40 bottles of beer on the wall\n\n40 bottles of beer on the wall\n40 bottles of beer\nTake one down, pass it around\n39 bottles of beer on the wall\n\n39 bottles of beer on the wall\n39 bottles of beer\nTake one down, pass it around\n38 bottles of beer on the wall\n\n38 bottles of beer on the wall\n38 bottles of beer\nTake one down, pass it around\n37 bottles of beer on the wall\n\n37 bottles of beer on the wall\n37 bottles of beer\nTake one down, pass it around\n36 bottles of beer on the wall\n\n36 bottles of beer on the wall\n36 bottles of beer\nTake one down, pass it around\n35 bottles of beer on the wall\n\n35 bottles of beer on the wall\n35 bottles of beer\nTake one down, pass it around\n34 bottles of beer on the wall\n\n34 bottles of beer on the wall\n34 bottles of beer\nTake one down, pass it around\n33 bottles of beer on the wall\n\n33 bottles of beer on the wall\n33 bottles of beer\nTake one down, pass it around\n32 bottles of beer on the wall\n\n32 bottles of beer on the wall\n32 bottles of beer\nTake one down, pass it around\n31 bottles of beer on the wall\n\n31 bottles of beer on the wall\n31 bottles of beer\nTake one down, pass it around\n30 bottles of beer on the wall\n\n30 bottles of beer on the wall\n30 bottles of beer\nTake one down, pass it around\n29 bottles of beer on the wall\n\n29 bottles of beer on the wall\n29 bottles of beer\nTake one down, pass it around\n28 bottles of beer on the wall\n\n28 bottles of beer on the wall\n28 bottles of beer\nTake one down, pass it around\n27 bottles of beer on the wall\n\n27 bottles of beer on the wall\n27 bottles of beer\nTake one down, pass it around\n26 bottles of beer on the wall\n\n26 bottles of beer on the wall\n26 bottles of beer\nTake one down, pass it around\n25 bottles of beer on the wall\n\n25 bottles of beer on the wall\n25 bottles of beer\nTake one down, pass it around\n24 bottles of beer on the wall\n\n24 bottles of beer on the wall\n24 bottles of beer\nTake one down, pass it around\n23 bottles of beer on the wall\n\n23 bottles of beer on the wall\n23 bottles of beer\nTake one down, pass it around\n22 bottles of beer on the wall\n\n22 bottles of beer on the wall\n57022 bottles of beer\n\rTake one down, pass it around\n21 bottles of beer on the wall\n\n21 bottles of beer on the wall\n21 bottles of beer\nTake one down, pass it around\n20 bottles of beer on the wall\n\n20 bottles of beer on the wall\n20 bottles of beer\nTake one down, pass it around\n19 bottles of beer on the wall\n\n19 bottles of beer on the wall\n19 bottles of beer\nTake one down, pass it around\n18 bottles of beer on the wall\n\n18 bottles of beer on the wall\n18 bottles of beer\nTake one down, pass it around\n17 bottles of beer on the wall\n\n17 bottles of beer on the wall\n17 bottles of beer\nTake one down, pass it around\n16 bottles of beer on the wall\n\n16 bottles of beer on the wall\n16 bottles of beer\nTake one down, pass it around\n15 bottles of beer on the wall\n\n15 bottles of beer on the wall\n15 bottles of beer\nTake one down, pass it around\n14 bottles of beer on the wall\n\n14 bottles of beer on the wall\n14 bottles of beer\nTake one down, pass it around\n13 bottles of beer on the wall\n\n13 bottles of beer on the wall\n13 bottles of beer\nTake one down, pass it around\n12 bottles of beer on the wall\n\n12 bottles of beer on the wall\n12 bottles of beer\nTake one down, pass it around\n11 bottles of beer on the wall\n\n11 bottles of beer on the wall\n11 bottles of beer\nTake one down, pass it around\n10 bottles of beer on the wall\n\n10 bottles of beer on the wall\n10 bottles of beer\nTake one down, pass it around\n9 bottles of beer on the wall\n\n9 bottles of beer on the wall\n9 bottles of beer\nTake one down, pass it around\n8 bottles of beer on the wall\n\n8 bottles of beer on the wall\n8 bottles of beer\nTake one down, pass it around\n7 bottles of beer on the wall\n\n7 bottles of beer on the wall\n7 bottles of beer\nTake one down, pass it around\n6 bottles of beer on the wall\n\n6 bottles of beer on the wall\n6 bottles of beer\nTake one down, pass it around\n5 bottles of beer on the wall\n\n5 bottles of beer on the wall\n5 bottles of beer\nTake one down, pass it around\n4 bottles of beer on the wall\n\n4 bottles of beer on the wall\n4 bottles of beer\nTake one down, pass it around\n5713 bottles of beer on the wall\n\n3 bottles of beer on the wall\n3 bottles of beer\nTake one down, pass it around\n2 bottles of beer on the wall\n\n2 bottles of beer on the wall\n2 bottles of beer\nTake one down, pass it around\n1 bottle of beer on the wall\n\n1 bottle of beer on the wall\n1 bottle of beer\nTake one down, pass it around\n0 bottles of beer on the wall\n\n",
+      "time" : "TODO"
+    },
+    {
+      "code" : "\n#= Sings a verse about a certian number of beers, possibly on a wall.\nsub sing(\n    Int $number, #= Number of bottles of beer.\n    Bool $has_wall = False #= Mention that the beers are on a wall?\n) {\n    my $quantity = $number == 0 ?? \"No more\" !! $number;\n    my $plural = $number == 1 ?? \"\" !! \"s\";\n    my $wall = $has_wall ?? \" on the wall\" !! \"\";\n    return \"{$quantity} bottle{$plural} of beer{$wall}\"\n}\n\nfor 99...1 -> $bottles {\n    .say for\n        sing($bottles, True),\n        sing($bottles),\n        \"Take one down, pass it around\",\n        sing($bottles-1, True),\n        \"\";\n}\n",
+      "result" : "572\r573\r574\r99 bottles of beer on the wall\n99 bottles of beer\nTake one down, pass it around\n98 bottles of beer on the wall\n\n98 bottles of beer on the wall\n98 bottles of beer\nTake one down, pass it around\n97 bottles of beer on the wall\n\n97 bottles of beer on the wall\n97 bottles of beer\nTake one down, pass it around\n96 bottles of beer on the wall\n\n96 bottles of beer on the wall\n96 bottles of beer\nTake one down, pass it around\n95 bottles of beer on the wall\n\n95 bottles of beer on the wall\n95 bottles of beer\nTake one down, pass it around\n94 bottles of beer on the wall\n\n94 bottles of beer on the wall\n94 bottles of beer\nTake one down, pass it around\n93 bottles of beer on the wall\n\n93 bottles of beer on the wall\n93 bottles of beer\nTake one down, pass it around\n92 bottles of beer on the wall\n\n92 bottles of beer on the wall\n92 bottles of beer\nTake one down, pass it around\n91 bottles of beer on the wall\n\n91 bottles of beer on the wall\n91 bottles of beer\nTake one down, pass it around\n90 bottles of beer on the wall\n\n90 bottles of beer on the wall\n90 bottles of beer\nTake one down, pass it around\n89 bottles of beer on the wall\n\n89 bottles of beer on the wall\n89 bottles of beer\nTake one down, pass it around\n88 bottles of beer on the wall\n\n88 bottles of beer on the wall\n88 bottles of beer\nTake one down, pass it around\n87 bottles of beer on the wall\n\n87 bottles of beer on the wall\n87 bottles of beer\nTake one down, pass it around\n86 bottles of beer on the wall\n\n86 bottles of beer on the wall\n86 bottles of beer\nTake one down, pass it around\n85 bottles of beer on the wall\n\n85 bottles of beer on the wall\n85 bottles of beer\nTake one down, pass it around\n84 bottles of beer on the wall\n\n84 bottles of beer on the wall\n84 bottles of beer\nTake one down, pass it around\n83 bottles of beer on the wall\n\n83 bottles of beer on the wall\n83 bottles of beer\nTake one down, pass it around\n82 bottles of beer on the wall\n\n82 bottles of beer on the wall\n82 bottles of beer\nTake one down, pass it around\n81 bottles of beer on the wall\n\n81 bottles of beer on the wall\n81 bottles of beer\nTake one down, pass it around\n80 bottles of beer on the wall\n\n80 bottles of beer on the wall\n80 bottles of beer\nTake one down, pass it around\n79 bottles of beer on the wall\n\n79 bottles of beer on the wall\n79 bottles of beer\nTake one down, pass it around\n78 bottles of beer on the wall\n\n575\r78 bottles of beer on the wall\n78 bottles of beer\nTake one down, pass it around\n77 bottles of beer on the wall\n\n77 bottles of beer on the wall\n77 bottles of beer\nTake one down, pass it around\n76 bottles of beer on the wall\n\n76 bottles of beer on the wall\n76 bottles of beer\nTake one down, pass it around\n75 bottles of beer on the wall\n\n75 bottles of beer on the wall\n75 bottles of beer\nTake one down, pass it around\n74 bottles of beer on the wall\n\n74 bottles of beer on the wall\n74 bottles of beer\nTake one down, pass it around\n73 bottles of beer on the wall\n\n73 bottles of beer on the wall\n73 bottles of beer\nTake one down, pass it around\n72 bottles of beer on the wall\n\n72 bottles of beer on the wall\n72 bottles of beer\nTake one down, pass it around\n71 bottles of beer on the wall\n\n71 bottles of beer on the wall\n71 bottles of beer\nTake one down, pass it around\n70 bottles of beer on the wall\n\n70 bottles of beer on the wall\n70 bottles of beer\nTake one down, pass it around\n69 bottles of beer on the wall\n\n69 bottles of beer on the wall\n69 bottles of beer\nTake one down, pass it around\n68 bottles of beer on the wall\n\n68 bottles of beer on the wall\n68 bottles of beer\nTake one down, pass it around\n67 bottles of beer on the wall\n\n67 bottles of beer on the wall\n67 bottles of beer\nTake one down, pass it around\n66 bottles of beer on the wall\n\n66 bottles of beer on the wall\n66 bottles of beer\nTake one down, pass it around\n65 bottles of beer on the wall\n\n65 bottles of beer on the wall\n65 bottles of beer\nTake one down, pass it around\n64 bottles of beer on the wall\n\n64 bottles of beer on the wall\n64 bottles of beer\nTake one down, pass it around\n63 bottles of beer on the wall\n\n63 bottles of beer on the wall\n63 bottles of beer\nTake one down, pass it around\n62 bottles of beer on the wall\n\n62 bottles of beer on the wall\n62 bottles of beer\nTake one down, pass it around\n61 bottles of beer on the wall\n\n61 bottles of beer on the wall\n61 bottles of beer\nTake one down, pass it around\n60 bottles of beer on the wall\n\n60 bottles of beer on the wall\n60 bottles of beer\nTake one down, pass it around\n59 bottles of beer on the wall\n\n59 bottles of beer on the wall\n59 bottles of beer\nTake one down, pass it around\n58 bottles of beer on the wall\n\n58 bottles of beer on the wall\n58 bottles of beer\nTake one down, pass it around\n57 bottles of beer on the wall\n\n57 bottles of beer on the wall\n57 bottles of beer\nTake one down, pass it around\n56 bottles of beer on the wall\n\n56 bottles of beer on the wall\n56 bottles of beer\nTake one down, pass it around\n55 bottles of beer on the wall\n\n55 bottles of beer on the wall\n55 bottles of beer\nTake one down, pass it around\n54 bottles of beer on the wall\n\n54 bottles of beer on the wall\n54 bottles of beer\nTake one down, pass it around\n53 bottles of beer on the wall\n\n53 bottles of beer on the wall\n53 bottles of beer\nTake one down, pass it around\n52 bottles of beer on the wall\n\n576\r52 bottles of beer on the wall\n52 bottles of beer\nTake one down, pass it around\n51 bottles of beer on the wall\n\n51 bottles of beer on the wall\n51 bottles of beer\nTake one down, pass it around\n50 bottles of beer on the wall\n\n50 bottles of beer on the wall\n50 bottles of beer\nTake one down, pass it around\n49 bottles of beer on the wall\n\n49 bottles of beer on the wall\n49 bottles of beer\nTake one down, pass it around\n48 bottles of beer on the wall\n\n48 bottles of beer on the wall\n48 bottles of beer\nTake one down, pass it around\n47 bottles of beer on the wall\n\n47 bottles of beer on the wall\n47 bottles of beer\nTake one down, pass it around\n46 bottles of beer on the wall\n\n46 bottles of beer on the wall\n46 bottles of beer\nTake one down, pass it around\n45 bottles of beer on the wall\n\n45 bottles of beer on the wall\n45 bottles of beer\nTake one down, pass it around\n44 bottles of beer on the wall\n\n44 bottles of beer on the wall\n44 bottles of beer\nTake one down, pass it around\n43 bottles of beer on the wall\n\n43 bottles of beer on the wall\n43 bottles of beer\nTake one down, pass it around\n42 bottles of beer on the wall\n\n42 bottles of beer on the wall\n42 bottles of beer\nTake one down, pass it around\n41 bottles of beer on the wall\n\n41 bottles of beer on the wall\n41 bottles of beer\nTake one down, pass it around\n40 bottles of beer on the wall\n\n40 bottles of beer on the wall\n40 bottles of beer\nTake one down, pass it around\n39 bottles of beer on the wall\n\n39 bottles of beer on the wall\n39 bottles of beer\n577Take one down, pass it around\n\r38 bottles of beer on the wall\n\n38 bottles of beer on the wall\n38 bottles of beer\nTake one down, pass it around\n37 bottles of beer on the wall\n\n37 bottles of beer on the wall\n37 bottles of beer\nTake one down, pass it around\n36 bottles of beer on the wall\n\n36 bottles of beer on the wall\n36 bottles of beer\nTake one down, pass it around\n35 bottles of beer on the wall\n\n35 bottles of beer on the wall\n35 bottles of beer\nTake one down, pass it around\n34 bottles of beer on the wall\n\n34 bottles of beer on the wall\n34 bottles of beer\nTake one down, pass it around\n33 bottles of beer on the wall\n\n33 bottles of beer on the wall\n33 bottles of beer\nTake one down, pass it around\n32 bottles of beer on the wall\n\n32 bottles of beer on the wall\n32 bottles of beer\nTake one down, pass it around\n31 bottles of beer on the wall\n\n31 bottles of beer on the wall\n31 bottles of beer\nTake one down, pass it around\n30 bottles of beer on the wall\n\n30 bottles of beer on the wall\n30 bottles of beer\nTake one down, pass it around\n29 bottles of beer on the wall\n\n29 bottles of beer on the wall\n29 bottles of beer\nTake one down, pass it around\n28 bottles of beer on the wall\n\n28 bottles of beer on the wall\n28 bottles of beer\nTake one down, pass it around\n27 bottles of beer on the wall\n\n27 bottles of beer on the wall\n27 bottles of beer\nTake one down, pass it around\n26 bottles of beer on the wall\n\n26 bottles of beer on the wall\n26 bottles of beer\nTake one down, pass it around\n25 bottles of beer on the wall\n\n25 bottles of beer on the wall\n25 bottles of beer\nTake one down, pass it around\n24 bottles of beer on the wall\n\n578\r24 bottles of beer on the wall\n24 bottles of beer\nTake one down, pass it around\n23 bottles of beer on the wall\n\n23 bottles of beer on the wall\n23 bottles of beer\nTake one down, pass it around\n22 bottles of beer on the wall\n\n22 bottles of beer on the wall\n22 bottles of beer\nTake one down, pass it around\n21 bottles of beer on the wall\n\n21 bottles of beer on the wall\n21 bottles of beer\nTake one down, pass it around\n20 bottles of beer on the wall\n\n20 bottles of beer on the wall\n20 bottles of beer\nTake one down, pass it around\n19 bottles of beer on the wall\n\n19 bottles of beer on the wall\n19 bottles of beer\nTake one down, pass it around\n18 bottles of beer on the wall\n\n18 bottles of beer on the wall\n18 bottles of beer\nTake one down, pass it around\n17 bottles of beer on the wall\n\n17 bottles of beer on the wall\n17 bottles of beer\nTake one down, pass it around\n16 bottles of beer on the wall\n\n16 bottles of beer on the wall\n16 bottles of beer\nTake one down, pass it around\n15 bottles of beer on the wall\n\n15 bottles of beer on the wall\n15 bottles of beer\nTake one down, pass it around\n14 bottles of beer on the wall\n\n14 bottles of beer on the wall\n14 bottles of beer\nTake one down, pass it around\n13 bottles of beer on the wall\n\n13 bottles of beer on the wall\n13 bottles of beer\nTake one down, pass it around\n12 bottles of beer on the wall\n\n12 bottles of beer on the wall\n12 bottles of beer\nTake one down, pass it around\n11 bottles of beer on the wall\n\n11 bottles of beer on the wall\n11 bottles of beer\nTake one down, pass it around\n10 bottles of beer on the wall\n\n10 bottles of beer on the wall\n10 bottles of beer\nTake one down, pass it around\n9 bottles of beer on the wall\n\n9 bottles of beer on the wall\n9 bottles of beer\nTake one down, pass it around\n8 bottles of beer on the wall\n\n8 bottles of beer on the wall\n8 bottles of beer\nTake one down, pass it around\n7 bottles of beer on the wall\n\n7 bottles of beer on the wall\n7 bottles of beer\nTake one down, pass it around\n6 bottles of beer on the wall\n\n5796 bottles of beer on the wall\n\r6 bottles of beer\nTake one down, pass it around\n5 bottles of beer on the wall\n\n5 bottles of beer on the wall\n5 bottles of beer\nTake one down, pass it around\n4 bottles of beer on the wall\n\n4 bottles of beer on the wall\n4 bottles of beer\nTake one down, pass it around\n3 bottles of beer on the wall\n\n3 bottles of beer on the wall\n3 bottles of beer\nTake one down, pass it around\n2 bottles of beer on the wall\n\n2 bottles of beer on the wall\n2 bottles of beer\nTake one down, pass it around\n1 bottle of beer on the wall\n\n1 bottle of beer on the wall\n1 bottle of beer\nTake one down, pass it around\nNo more bottles of beer on the wall\n\n",
+      "time" : "TODO"
+    },
+    {
+      "code" : "my @quantities = (99 ... 1), 'No more', 99;\nmy @bottles = 'bottles' xx 98, 'bottle', 'bottles' xx 2;\nmy @actions = 'Take one down, pass it around' xx 99,\n              'Go to the store, buy some more';\n\nfor @quantities Z @bottles Z @actions Z\n    @quantities[1 .. *] Z @bottles[1 .. *]\n    -> $a, $b, $c, $d, $e {\n    say \"$a $b of beer on the wall\";\n    say \"$a $b of beer\";\n    say $c;\n    say \"$d $e of beer on the wall\\\n\";\n}",
+      "result" : "580\r581\r582\r583\r584\r585\r586\r587\r99 bottles of beer on the wall\n99 bottles of beer\nTake one down, pass it around\n98 bottles of beer on the wall\n\n98 bottles of beer on the wall\n98 bottles of beer\nTake one down, pass it around\n97 bottles of beer on the wall\n\n97 bottles of beer on the wall\n97 bottles of beer\nTake one down, pass it around\n58896 bottles of beer on the wall\n\n\r96 bottles of beer on the wall\n96 bottles of beer\nTake one down, pass it around\n95 bottles of beer on the wall\n\n95 bottles of beer on the wall\n95 bottles of beer\nTake one down, pass it around\n94 bottles of beer on the wall\n\n94 bottles of beer on the wall\n94 bottles of beer\nTake one down, pass it around\n93 bottles of beer on the wall\n\n93 bottles of beer on the wall\n93 bottles of beer\nTake one down, pass it around\n92 bottles of beer on the wall\n\n92 bottles of beer on the wall\n92 bottles of beer\nTake one down, pass it around\n91 bottles of beer on the wall\n\n91 bottles of beer on the wall\n91 bottles of beer\nTake one down, pass it around\n90 bottles of beer on the wall\n\n90 bottles of beer on the wall\n90 bottles of beer\nTake one down, pass it around\n89 bottles of beer on the wall\n\n89 bottles of beer on the wall\n89 bottles of beer\nTake one down, pass it around\n88 bottles of beer on the wall\n\n88 bottles of beer on the wall\n88 bottles of beer\nTake one down, pass it around\n87 bottles of beer on the wall\n\n87 bottles of beer on the wall\n87 bottles of beer\nTake one down, pass it around\n86 bottles of beer on the wall\n\n86 bottles of beer on the wall\n86 bottles of beer\nTake one down, pass it around\n85 bottles of beer on the wall\n\n85 bottles of beer on the wall\n85 bottles of beer\n589Take one down, pass it around\n\r84 bottles of beer on the wall\n\n84 bottles of beer on the wall\n84 bottles of beer\nTake one down, pass it around\n83 bottles of beer on the wall\n\n83 bottles of beer on the wall\n83 bottles of beer\nTake one down, pass it around\n82 bottles of beer on the wall\n\n82 bottles of beer on the wall\n82 bottles of beer\nTake one down, pass it around\n81 bottles of beer on the wall\n\n81 bottles of beer on the wall\n81 bottles of beer\nTake one down, pass it around\n80 bottles of beer on the wall\n\n80 bottles of beer on the wall\n80 bottles of beer\nTake one down, pass it around\n79 bottles of beer on the wall\n\n79 bottles of beer on the wall\n79 bottles of beer\nTake one down, pass it around\n78 bottles of beer on the wall\n\n78 bottles of beer on the wall\n78 bottles of beer\nTake one down, pass it around\n77 bottles of beer on the wall\n\n77 bottles of beer on the wall\n77 bottles of beer\nTake one down, pass it around\n76 bottles of beer on the wall\n\n76 bottles of beer on the wall\n590\r76 bottles of beer\nTake one down, pass it around\n75 bottles of beer on the wall\n\n75 bottles of beer on the wall\n75 bottles of beer\nTake one down, pass it around\n74 bottles of beer on the wall\n\n74 bottles of beer on the wall\n74 bottles of beer\nTake one down, pass it around\n73 bottles of beer on the wall\n\n73 bottles of beer on the wall\n73 bottles of beer\nTake one down, pass it around\n72 bottles of beer on the wall\n\n72 bottles of beer on the wall\n72 bottles of beer\nTake one down, pass it around\n71 bottles of beer on the wall\n\n71 bottles of beer on the wall\n71 bottles of beer\nTake one down, pass it around\n70 bottles of beer on the wall\n\n70 bottles of beer on the wall\n70 bottles of beer\nTake one down, pass it around\n69 bottles of beer on the wall\n\n69 bottles of beer on the wall\n69 bottles of beer\nTake one down, pass it around\n68 bottles of beer on the wall\n\n68 bottles of beer on the wall\n68 bottles of beer\nTake one down, pass it around\n67 bottles of beer on the wall\n\n67 bottles of beer on the wall\n67 bottles of beer\nTake one down, pass it around\n66 bottles of beer on the wall\n\n66 bottles of beer on the wall\n66 bottles of beer\nTake one down, pass it around\n65 bottles of beer on the wall\n\n65 bottles of beer on the wall\n65 bottles of beer\nTake one down, pass it around\n64 bottles of beer on the wall\n\n591\r64 bottles of beer on the wall\n64 bottles of beer\nTake one down, pass it around\n63 bottles of beer on the wall\n\n63 bottles of beer on the wall\n63 bottles of beer\nTake one down, pass it around\n62 bottles of beer on the wall\n\n62 bottles of beer on the wall\n62 bottles of beer\nTake one down, pass it around\n61 bottles of beer on the wall\n\n61 bottles of beer on the wall\n61 bottles of beer\nTake one down, pass it around\n60 bottles of beer on the wall\n\n60 bottles of beer on the wall\n60 bottles of beer\nTake one down, pass it around\n59 bottles of beer on the wall\n\n59 bottles of beer on the wall\n59 bottles of beer\nTake one down, pass it around\n58 bottles of beer on the wall\n\n58 bottles of beer on the wall\n58 bottles of beer\nTake one down, pass it around\n57 bottles of beer on the wall\n\n57 bottles of beer on the wall\n57 bottles of beer\nTake one down, pass it around\n56 bottles of beer on the wall\n\n56 bottles of beer on the wall\n56 bottles of beer\nTake one down, pass it around\n55 bottles of beer on the wall\n\n55 bottles of beer on the wall\n55 bottles of beer\nTake one down, pass it around\n54 bottles of beer on the wall\n\n592\r54 bottles of beer on the wall\n54 bottles of beer\nTake one down, pass it around\n53 bottles of beer on the wall\n\n53 bottles of beer on the wall\n53 bottles of beer\nTake one down, pass it around\n52 bottles of beer on the wall\n\n52 bottles of beer on the wall\n52 bottles of beer\nTake one down, pass it around\n51 bottles of beer on the wall\n\n51 bottles of beer on the wall\n51 bottles of beer\nTake one down, pass it around\n50 bottles of beer on the wall\n\n50 bottles of beer on the wall\n50 bottles of beer\nTake one down, pass it around\n49 bottles of beer on the wall\n\n49 bottles of beer on the wall\n49 bottles of beer\nTake one down, pass it around\n48 bottles of beer on the wall\n\n48 bottles of beer on the wall\n48 bottles of beer\nTake one down, pass it around\n47 bottles of beer on the wall\n\n47 bottles of beer on the wall\n47 bottles of beer\nTake one down, pass it around\n46 bottles of beer on the wall\n\n46 bottles of beer on the wall\n46 bottles of beer\nTake one down, pass it around\n45 bottles of beer on the wall\n\n45 bottles of beer on the wall\n45 bottles of beer\n593\rTake one down, pass it around\n44 bottles of beer on the wall\n\n44 bottles of beer on the wall\n44 bottles of beer\nTake one down, pass it around\n43 bottles of beer on the wall\n\n43 bottles of beer on the wall\n43 bottles of beer\nTake one down, pass it around\n42 bottles of beer on the wall\n\n42 bottles of beer on the wall\n42 bottles of beer\nTake one down, pass it around\n41 bottles of beer on the wall\n\n41 bottles of beer on the wall\n41 bottles of beer\nTake one down, pass it around\n40 bottles of beer on the wall\n\n40 bottles of beer on the wall\n40 bottles of beer\nTake one down, pass it around\n39 bottles of beer on the wall\n\n39 bottles of beer on the wall\n39 bottles of beer\nTake one down, pass it around\n38 bottles of beer on the wall\n\n38 bottles of beer on the wall\n38 bottles of beer\nTake one down, pass it around\n37 bottles of beer on the wall\n\n37 bottles of beer on the wall\n37 bottles of beer\nTake one down, pass it around\n36 bottles of beer on the wall\n\n36 bottles of beer on the wall\n36 bottles of beer\nTake one down, pass it around\n35 bottles of beer on the wall\n\n59435 bottles of beer on the wall\n\r35 bottles of beer\nTake one down, pass it around\n34 bottles of beer on the wall\n\n34 bottles of beer on the wall\n34 bottles of beer\nTake one down, pass it around\n33 bottles of beer on the wall\n\n33 bottles of beer on the wall\n33 bottles of beer\nTake one down, pass it around\n32 bottles of beer on the wall\n\n32 bottles of beer on the wall\n32 bottles of beer\nTake one down, pass it around\n31 bottles of beer on the wall\n\n31 bottles of beer on the wall\n31 bottles of beer\nTake one down, pass it around\n30 bottles of beer on the wall\n\n30 bottles of beer on the wall\n30 bottles of beer\nTake one down, pass it around\n29 bottles of beer on the wall\n\n29 bottles of beer on the wall\n29 bottles of beer\nTake one down, pass it around\n28 bottles of beer on the wall\n\n28 bottles of beer on the wall\n28 bottles of beer\nTake one down, pass it around\n27 bottles of beer on the wall\n\n27 bottles of beer on the wall\n27 bottles of beer\nTake one down, pass it around\n26 bottles of beer on the wall\n\n26 bottles of beer on the wall\n26 bottles of beer\nTake one down, pass it around\n25 bottles of beer on the wall\n\n25 bottles of beer on the wall\n25 bottles of beer\nTake one down, pass it around\n59524 bottles of beer on the wall\n\n\r24 bottles of beer on the wall\n24 bottles of beer\nTake one down, pass it around\n23 bottles of beer on the wall\n\n23 bottles of beer on the wall\n23 bottles of beer\nTake one down, pass it around\n22 bottles of beer on the wall\n\n22 bottles of beer on the wall\n22 bottles of beer\nTake one down, pass it around\n21 bottles of beer on the wall\n\n21 bottles of beer on the wall\n21 bottles of beer\nTake one down, pass it around\n20 bottles of beer on the wall\n\n20 bottles of beer on the wall\n20 bottles of beer\nTake one down, pass it around\n19 bottles of beer on the wall\n\n19 bottles of beer on the wall\n19 bottles of beer\nTake one down, pass it around\n18 bottles of beer on the wall\n\n18 bottles of beer on the wall\n18 bottles of beer\nTake one down, pass it around\n17 bottles of beer on the wall\n\n17 bottles of beer on the wall\n17 bottles of beer\nTake one down, pass it around\n16 bottles of beer on the wall\n\n16 bottles of beer on the wall\n16 bottles of beer\nTake one down, pass it around\n15 bottles of beer on the wall\n\n15 bottles of beer on the wall\n15 bottles of beer\nTake one down, pass it around\n14 bottles of beer on the wall\n\n14 bottles of beer on the wall\n14 bottles of beer\nTake one down, pass it around\n13 bottles of beer on the wall\n\n13 bottles of beer on the wall\n13 bottles of beer\nTake one down, pass it around\n12 bottles of beer on the wall\n\n12 bottles of beer on the wall\n12 bottles of beer\nTake one down, pass it around\n11 bottles of beer on the wall\n\n11 bottles of beer on the wall\n11 bottles of beer\nTake one down, pass it around\n10 bottles of beer on the wall\n\n10 bottles of beer on the wall\n10 bottles of beer\nTake one down, pass it around\n9 bottles of beer on the wall\n\n596\r9 bottles of beer on the wall\n9 bottles of beer\nTake one down, pass it around\n8 bottles of beer on the wall\n\n8 bottles of beer on the wall\n8 bottles of beer\nTake one down, pass it around\n7 bottles of beer on the wall\n\n7 bottles of beer on the wall\n7 bottles of beer\nTake one down, pass it around\n6 bottles of beer on the wall\n\n6 bottles of beer on the wall\n6 bottles of beer\nTake one down, pass it around\n5 bottles of beer on the wall\n\n5 bottles of beer on the wall\n5 bottles of beer\nTake one down, pass it around\n4 bottles of beer on the wall\n\n4 bottles of beer on the wall\n4 bottles of beer\nTake one down, pass it around\n3 bottles of beer on the wall\n\n3 bottles of beer on the wall\n3 bottles of beer\nTake one down, pass it around\n2 bottles of beer on the wall\n\n2 bottles of beer on the wall\n2 bottles of beer\nTake one down, pass it around\n1 bottle of beer on the wall\n\n1 bottle of beer on the wall\n1 bottle of beer\nTake one down, pass it around\nNo more bottles of beer on the wall\n\nNo more bottles of beer on the wall\nNo more bottles of beer\nGo to the store, buy some more\n99 bottles of beer on the wall\n\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 6812,
+  "title" : "A+B",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=A%2BB",
+  "codes" : [
+    {
+      "code" : "say [+] .words for lines",
+      "result" : "insecure",
+      "time" : null
+    }
+  ]
+}
+
+,{
+  "id" : 17061,
+  "title" : "ABC Problem",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=ABC_Problem",
+  "codes" : [
+    {
+      "code" : "multi can-spell-word(Str $word, @blocks) {\n    my @regex = @blocks.map({ EVAL \"/{.comb.join('|')}/\" }).grep: { .ACCEPTS($word.uc) }\n    can-spell-word $word.uc.comb, @regex;\n}\n\nmulti can-spell-word([$head,*@tail], @regex) {\n    for @regex -> $re {\n        if $head ~~ $re {\n            return True unless @tail;\n            return False if @regex == 1;\n            return True if can-spell-word @tail, @regex.grep: * !=== $re;\n        }\n    }\n    False;\n}\n\nmy @b = <BO XK DQ CP NA GT RE TG QD FS JW HU VI AN OB ER FS LY PC ZM>;\n\nfor <A BaRK BOoK tREaT COmMOn SqUAD CoNfuSE> {\n    say \"$_     &can-spell-word($_, @b)\";\n}",
+      "result" : "A     True\nBaRK     True\nBOoK     False\ntREaT     True\nCOmMOn     False\nSqUAD     True\nCoNfuSE     True\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 3131,
+  "title" : "Abstract type",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Abstract_type",
+  "codes" : [
+    {
+      "code" : "\nuse v6;\n\nrole A {\n    # must be filled in by the class it is composed into\n    method abstract() { ... };\n\n    # can be overridden in the class, but that's not mandatory\n    method concrete() { say '# 42' };\n}\n\nclass SomeClass does A {\n    method abstract() {\n        say \"# made concrete in class\"\n    }\n}\n\nmy $obj = SomeClass.new;\n$obj.abstract();\n$obj.concrete();\n\n# output:\n# made concrete in class\n# 42\n",
+      "result" : "# made concrete in class\n# 42\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 5255,
+  "title" : "Accumulator factory",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Accumulator_factory",
+  "codes" : [
+    {
+      "code" : "sub accum ($n is copy) { sub { $n += $^x } }",
+      "result" : null,
+      "time" : "TODO"
+    },
+    {
+      "code" : "my $a = accum 5;\n$a(4.5);\nsay $a(.5);   # Prints \"10\".",
+      "result" : "FAIL: Undeclared routine:\n    accum used at line 1\n",
+      "time" : "TODO"
+    },
+    {
+      "code" : "my &b = accum 5;\nsay b 3;   # Prints \"8\".",
+      "result" : "FAIL: Undeclared routine:\n    accum used at line 1\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 3050,
+  "title" : "Ackermann function",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Ackermann_function",
+  "codes" : [
+    {
+      "code" : "sub A(Int $m, Int $n) {\n    if    $m == 0 { $n + 1 } \n    elsif $n == 0 { A($m - 1, 1) }\n    else          { A($m - 1, A($m, $n - 1)) }\n}",
+      "result" : null,
+      "time" : "TODO"
+    },
+    {
+      "code" : "multi sub A(0,      Int $n) { $n + 1                   }\nmulti sub A(Int $m, 0     ) { A($m - 1, 1)             }\nmulti sub A(Int $m, Int $n) { A($m - 1, A($m, $n - 1)) }",
+      "result" : null,
+      "time" : "TODO"
+    },
+    {
+      "code" : "proto A(Int \\\\ud835\\udc5a, Int \\\\ud835\\udc5b) { (state @)[\\ud835\\udc5a][\\ud835\\udc5b] //= {*} }\n\nmulti A(0,      Int \\\\ud835\\udc5b) { \\ud835\\udc5b + 1 }\nmulti A(1,      Int \\\\ud835\\udc5b) { \\ud835\\udc5b + 2 }\nmulti A(2,      Int \\\\ud835\\udc5b) { 3 + 2 * \\ud835\\udc5b }\nmulti A(3,      Int \\\\ud835\\udc5b) { 5 + 8 * (2 ** \\ud835\\udc5b - 1) }\n\nmulti A(Int \\\\ud835\\udc5a, 0     ) { A(\\ud835\\udc5a - 1, 1) }\nmulti A(Int \\\\ud835\\udc5a, Int \\\\ud835\\udc5b) { A(\\ud835\\udc5a - 1, A(\\ud835\\udc5a, \\ud835\\udc5b - 1)) }",
+      "result" : "FAIL: Missing block",
+      "time" : "TODO"
+    },
+    {
+      "code" : "say A(4,1);\nsay .chars, \" digits starting with \", .substr(0,50), \"...\" given A(4,2);",
+      "result" : "FAIL: Cannot invoke this object (REPR: Uninstantiable, cs = 0)",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 2135,
+  "title" : "Add a variable to a class instance at runtime",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Add_a_variable_to_a_class_instance_at_runtime",
+  "codes" : [
+    {
+      "code" : "class Bar { }             # an empty class\n\nmy $object = Bar.new;     # new instance\n\nrole a_role {             # role to add a variable: foo,\n   has $.foo is rw = 2;   # with an initial value of 2\n}\n\n$object does a_role;      # compose in the role\n\nsay $object.foo;          # prints: 2\n$object.foo = 5;          # change the variable\nsay $object.foo;          # prints: 5\n\nmy $ohno = Bar.new;       # new Bar object\n#say $ohno.foo;           # runtime error, base Bar class doesn't have the variable foo\n\nmy $this = $object.new;   # instantiate a new Bar derived from $object\nsay $this.foo;            # prints: 2 - original role value\n\nmy $that = $object.clone; # instantiate a new Bar derived from $object copying any variables\nsay $that.foo;            # 5 - value from the cloned object",
+      "result" : "2\n5\n2\n5\n",
+      "time" : "TODO"
+    },
+    {
+      "code" : "my $lue = 42 but role { has $.answer = \"Life, the Universe, and Everything\" }\n\nsay $lue;          # 42\nsay $lue.answer;   # Life, the Universe, and Everything",
+      "result" : "42\nLife, the Universe, and Everything\n",
+      "time" : "TODO"
+    },
+    {
+      "code" : "use MONKEY_TYPING;\naugment class Int {\n    method answer { \"Life, the Universe, and Everything\" }\n}\nsay 42.answer;     # Life, the Universe, and Everything",
+      "result" : "Life, the Universe, and Everything\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 1985,
+  "title" : "Address of a variable",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Address_of_a_variable",
+  "codes" : [
+    {
+      "code" : "my $x; say $x.WHERE;",
+      "result" : "16797976\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 17175,
+  "title" : "AKS test for primes",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=AKS_test_for_primes",
+  "codes" : [
+    {
+      "code" : "constant expansions = [1], [1,-1], -> @prior { [@prior,0 Z- 0,@prior] } ... *;\n\nsub polyprime($p where 2..*) { so expansions[$p].[1 ..^ */2].all %% $p }",
+      "result" : null,
+      "time" : "TODO"
+    },
+    {
+      "code" : "say ' p: (x-1)\\u1d56';\nsay '-----------';\n\nsub super ($n) {\n    $n.trans: '0123456789'\n           => '\\u2070\\u00b9\\u00b2\\u00b3\\u2074\\u2075\\u2076\\u2077\\u2078\\u2079';\n}\n\nfor ^13 -> $d {\n    say $d.fmt('%2i: '), (\n        expansions[$d].kv.map: -> $i, $n {\n            my $p = $d - $i;\n            [~] gather {\n                take < + - >[$n < 0] ~ ' ' unless $p == $d;\n                take $n.abs                unless $p == $d > 0;\n                take 'x'                   if $p > 0;\n                take super $p - $i         if $p > 1;\n            }\n        }\n    )\n}",
+      "result" : " p: (x-1)\\u1d56\n-----------\n 0: 1\n 1: x - 1\n 2: x2 - 2x + 1\n 3: x0 - 3xu + 3x - 1\n 4: x7 - 4x2 + 6x\\ - 4x + 1\n 5: x0 - 5x0 + 10xu - 10x-u + 5x - 1\n 6: x\\ - 6x7 + 15x2 - 20x\\ + 15x-2 - 6x + 1\n 7: xu - 7x0 + 21x0 - 35xu + 35x-u - 21x-0 + 7x - 1\n 8: x0 - 8x\\ + 28x7 - 56x2 + 70x\\ - 56x-2 + 28x-7 - 8x + 1\n 9: x0 - 9xu + 36x0 - 84x0 + 126xu - 126x-u + 84x-0 - 36x-0 + 9x - 1\n10: xu\\ - 10x0 + 45x\\ - 120x7 + 210x2 - 252x\\ + 210x-2 - 120x-7 + 45x-\\ - 10x + 1\n11: xuu - 11x0 + 55xu - 165x0 + 330x0 - 462xu + 462x-u - 330x-0 + 165x-0 - 55x-u + 11x - 1\n12: xu2 - 12xu\\ + 66x0 - 220x\\ + 495x7 - 792x2 + 924x\\ - 792x-2 + 495x-7 - 220x-\\ + 66x-0 - 12x + 1\n",
+      "time" : "TODO"
+    },
+    {
+      "code" : "print \"\\\nPrimes up to 100:\\\n  { grep &polyprime, 2..100 }\\\n\";",
+      "result" : "FAIL: Undeclared routine:\n    &polyprime used at line 3\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 3114,
+  "title" : "Align columns",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Align_columns",
+  "codes" : [ ]
+}
+,{
+  "id" : 17227,
+  "title" : "Almost prime",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Almost_prime",
+  "codes" : [
+    {
+      "code" : "sub is-k-almost-prime($n is copy, $k) returns Bool {\n    loop (my ($p, $f) = 2, 0; $f < $k && $p*$p <= $n; $p++) {\n        $n /= $p, $f++ while $n %% $p;\n    }\n    $f + ($n > 1) == $k;\n}\n\nfor 1 .. 5 -> $k {\n    say .[^10]\n        given grep { is-k-almost-prime($_, $k) }, 2 .. *\n}",
+      "result" : "2 3 5 7 11 13 17 19 23 29\n4 6 9 10 14 15 21 22 25 26\n8 12 18 20 27 28 30 42 44 45\n16 24 36 40 54 56 60 81 84 88\n32 48 72 80 108 112 120 162 168 176\n",
+      "time" : "TODO"
+    },
+    {
+      "code" : "constant factory = 0..* Z=> (0, 0, map { +factors($_) }, 2..*);\n\nsub almost($n) { map *.key, grep *.value == $n, factory }\n\nsay almost($_)[^10] for 1..5;",
+      "result" : "FAIL: Undeclared routine:\n    factors used at line 1\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 2774,
+  "title" : "Amb",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Amb",
+  "codes" : [
+    {
+      "code" : "sub infix:<lf> ($a,$b) {\n    next unless try $a.substr(*-1,1) eq $b.substr(0,1);\n    \"$a $b\";\n}\n\nmulti dethunk(Callable $x) { try take $x() }\nmulti dethunk(     Any $x) {     take $x   }\n\nsub amb (*@c) { gather @c\u00bb.&dethunk }\n\nsay first *, do\n    amb(<the that a>, { die 'oops'}) Xlf\n    amb('frog',{'elephant'},'thing') Xlf\n    amb(<walked treaded grows>)      Xlf\n    amb { die 'poison dart' },\n        {'slowly'},\n        {'quickly'},\n        { die 'fire' };",
+      "result" : "that thing grows slowly\n",
+      "time" : "TODO"
+    },
+    {
+      "code" : "sub amb($var,*@a) {\n    \"[{\n        @a.pick(*).map: {\"||\\{ $var = '$_' }\"}\n     }]\";\n}\n\n'' ~~ m/\n    :my ($a,$b,$c,$d);\n    <{ amb '$a', <the that a> }>\n    <{ amb '$b', <frog elephant thing> }>\n    <?{ substr($a,*-1,1) eq substr($b,0,1) }>\n    <{ amb '$c', <walked treaded grows> }>\n    <?{ substr($b,*-1,1) eq substr($c,0,1) }>\n    <{ amb '$d', <slowly quickly> }>\n    <?{ substr($c,*-1,1) eq substr($d,0,1) }>\n    { say \"$a $b $c $d\" }\n    <!>\n/;",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 3052,
+  "title" : "Anagrams",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Anagrams",
+  "codes" : [
+    {
+      "code" : "my %anagram = slurp('unixdict.txt').words.classify( { .comb.sort.join } );\n\nmy $max = [max] map { +@($_) }, %anagram.values;\n\n%anagram.values.grep( { +@($_) >= $max } )\u00bb.join(' ')\u00bb.say;",
+      "result" : "FAIL: Failed to open file: no such file or directory",
+      "time" : "TODO"
+    },
+    {
+      "code" : "\n.say for                              # print each element of the array made this way:\nslurp('unixdict.txt')\\                # load file in memory\n.words\\                               # extract words\n.classify( *.comb.sort.join )\\        # group by common anagram\n.classify( *.value.elems )\\           # group by number of anagrams in a group\n.max( :by(*.key) ).value\\             # get the group with highest number of anagrams\n\u00bb.value                               # get all groups of anagrams in the group just selected",
+      "result" : "FAIL: Failed to open file: no such file or directory",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 9632,
+  "title" : "Anagrams/Deranged anagrams",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Anagrams/Deranged_anagrams",
+  "codes" : [
+    {
+      "code" : "my %anagram = slurp('dict.ie').words.map({[.comb]}).classify({ .sort.join });\n\nfor %anagram.values.sort({ -@($_[0]) }) -> @aset {\n    for     0   ..^ @aset.end -> $i {\n        for $i ^..  @aset.end -> $j {\n            if none(  @aset[$i].list Zeq @aset[$j].list ) {\n                say \"{@aset[$i].join}   {@aset[$j].join}\";\n                exit;\n            }\n        }\n    }\n}",
+      "result" : "FAIL: Failed to open file: no such file or directory",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 8846,
+  "title" : "Anonymous recursion",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Anonymous_recursion",
+  "codes" : [
+    {
+      "code" : "sub fib($n) {\n    die \"Naughty fib\" if $n < 0;\n    return {\n        $_ < 2\n            ?? $_\n            !!  &?BLOCK($_-1) + &?BLOCK($_-2);\n    }($n);\n}\n\nsay fib(10);",
+      "result" : "FAIL: Undeclared routine:\n    &?BLOCK used at line 6\n",
+      "time" : "TODO"
+    },
+    {
+      "code" : "constant @fib = 0, 1, *+* ... *;\nsay @fib[10];",
+      "result" : "55\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 1639,
+  "title" : "Apply a callback to an array",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Apply_a_callback_to_an_array",
+  "codes" : [
+    {
+      "code" : "my $function = { 2 * $^x + 3 };\nmy @array = 1 .. 5;\n\n# via map function\n.say for map $function, @array;\n\n# via map method\n.say for @array.map($function);\n\n# via for loop\nfor @array {\n    say $function($_);\n}\n\n# via the \"hyper\" metaoperator and method indirection\nsay @array\u00bb.$function;",
+      "result" : "5\n7\n9\n11\n13\n5\n7\n9\n11\n13\n5\n7\n9\n11\n13\n5 7 9 11 13\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 6036,
+  "title" : "Arbitrary-precision integers (included)",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Arbitrary-precision_integers_(included)",
+  "codes" : [
+    {
+      "code" : "given ~[**] 5, 4, 3, 2 {\n   say \"5**4**3**2 = {.substr: 0,20}...{.substr: *-20} and has {.chars} digits\";\n}",
+      "result" : null,
+      "time" : "timed out"
+    }
+  ]
+}
+
+,{
+  "id" : 2414,
+  "title" : "Arithmetic evaluation",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Arithmetic_evaluation",
+  "codes" : [
+    {
+      "code" : "sub ev (Str $s --> Num) {\n\n    grammar expr {\n        token TOP { ^ <sum> $ }\n        token sum { <product> (('+' || '-') <product>)* }\n        token product { <factor> (('*' || '/') <factor>)* }\n        token factor { <unary_minus>? [ <parens> || <literal> ] }\n        token unary_minus { '-' }\n        token parens { '(' <sum> ')' }\n        token literal { \\d+ ['.' \\d+]? || '.' \\d+ }\n    }\n    \n    my sub minus ($b) { $b ?? -1 !! +1 }\n\n    my sub sum ($x) {\n        [+] product($x<product>), map\n            { minus($^y[0] eq '-') * product $^y<product> },\n            |($x[0] or [])\n    }\n    \n    my sub product ($x) {\n        [*] factor($x<factor>), map\n            { factor($^y<factor>) ** minus($^y[0] eq '/') },\n            |($x[0] or [])\n    }\n    \n    my sub factor ($x) {\n        minus($x<unary_minus>) * ($x<parens>\n          ?? sum $x<parens><sum>\n          !! $x<literal>)\n    }\n\n    expr.parse([~] split /\\s+/, $s);\n    $/ or fail 'No parse.';\n    sum $/<sum>;\n\n}",
+      "result" : null,
+      "time" : "TODO"
+    },
+    {
+      "code" : "say ev '5';                                    #   5\nsay ev '1 + 2 - 3 * 4 / 5';                    #   0.6\nsay ev '1 + 5*3.4 - .5  -4 / -2 * (3+4) -6';   #  25.5\nsay ev '((11+15)*15)* 2 + (3) * -4 *1';        # 768",
+      "result" : "FAIL: Undeclared routine:\n    ev used at lines 1, 2, 3, 4. Did you mean 'kv'?\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 11377,
+  "title" : "Arithmetic-geometric mean",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Arithmetic-geometric_mean",
+  "codes" : [
+    {
+      "code" : "\nsub agm( $a is copy, $g is copy ) {\n    loop {\n        given ($a + $g)/2, sqrt $a * $g {\n            return $a if @$_ ~~ ($a, $g);\n            ($a, $g) = @$_;\n        }\n    }\n}\n\nsay agm 1, 1/sqrt 2;\n\n",
+      "result" : "0.847213084793979\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 17074,
+  "title" : "Arithmetic-geometric mean/Calculate Pi",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Arithmetic-geometric_mean/Calculate_Pi",
+  "codes" : [
+    {
+      "code" : "constant number-of-decimals = 100;\n\nmulti sqrt(Int $n) {\n    .[*-1] given\n    1, { ($_ + $n div $_) div 2 } ... * == *\n}\nmulti sqrt(FatRat $r --> FatRat) {\n    return FatRat.new:\n    sqrt($r.nude[0] * 10**(number-of-decimals*2) div $r.nude[1]),\n    10**number-of-decimals;\n}\n\nmy FatRat ($a, $n) = 1.FatRat xx 2;\nmy FatRat $g = sqrt(1/2.FatRat);\nmy $z = .25;\n \nfor ^10 {\n    given [ ($a + $g)/2, sqrt($a * $g) ] {\n\t$z -= (.[0] - $a)**2 * $n;\n\t$n += $n;\n\t($a, $g) = @$_;\n\tsay ($a ** 2 / $z).substr: 0, 2 + number-of-decimals;\n    }\n}",
+      "result" : "3.1876726427121086272019299705253692326510535718593692264876339862751228325281223301147286106601617972\n3.1416802932976532939180704245600093827957194388154028326441894631956630010102553193888894275152646100\n3.1415926538954464960029147588180434861088792372613115896511013576846530795030865017740975862898631567\n3.1415926535897932384663606027066313217577024113424293564868460152384109486069277582680622007332762125\n3.1415926535897932384626433832795028841971699491647266058346961259487480060953290058518515759317101932\n3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280468522286541140\n3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170668\n3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170665\n3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170664\n3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170663\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 2688,
+  "title" : "Arithmetic/Complex",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Arithmetic/Complex",
+  "codes" : [
+    {
+      "code" : "my $a = 1 + i;\nmy $b = pi + 1.25i;\n\n.say for $a + $b, $a * $b, -$a, 1 / $a, $a.conj;\n.say for $a.abs, $a.sqrt, $a.re, $a.im;",
+      "result" : "4.14159265358979+2.25i\n1.89159265358979+4.39159265358979i\n-1-1i\n0.5-0.5i\n1-1i\n1.4142135623731\n1.09868411346781+0.455089860562227i\n1\n1\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 2069,
+  "title" : "Arithmetic/Integer",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Arithmetic/Integer",
+  "codes" : [
+    {
+      "code" : "my Int $a = get.floor;\nmy Int $b = get.floor;\n\nsay 'sum:              ', $a + $b;\nsay 'difference:       ', $a - $b;\nsay 'product:          ', $a * $b;\nsay 'integer quotient: ', $a div $b;\nsay 'remainder:        ', $a % $b;\nsay 'exponentiation:   ', $a**$b;",
+      "result" : "FAIL: Calling 'get' requires arguments (if you meant to operate on $_, please use .get or use an explicit invocant or argument)\n    Expected: :(Str $url)\nCalling 'get' requires arguments (if you meant to operate on $_, please use .get or use an explicit invocant or argument)\n    Expected: :(Str $url)",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 3370,
+  "title" : "Arithmetic/Rational",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Arithmetic/Rational",
+  "codes" : [
+    {
+      "code" : "for 2..2**19 -> $candidate {\n    my $sum = 1 / $candidate;\n    for 2 .. ceiling(sqrt($candidate)) -> $factor {\n        if $candidate %% $factor {\n            $sum += 1 / $factor + 1 / ($candidate / $factor);\n        }\n    }\n    if $sum.denominator == 1 {\n        say \"Sum of reciprocal factors of $candidate = $sum exactly\", ($sum == 1 ?? \", perfect!\" !! \".\");\n    }\n}",
+      "result" : "FAIL: Calling 'get' requires arguments (if you meant to operate on $_, please use .get or use an explicit invocant or argument)\n    Expected: :(Str $url)\nCalling 'get' requires arguments (if you meant to operate on $_, please use .get or use an explicit invocant or argument)\n    Expected: :(Str $url)",
+      "time" : "timed out"
+    },
+    {
+      "code" : "for 1.0, 1.1, 1.2 ... 10 { .say }",
+      "result" : "1\n1.1\n1.2\n1.3\n1.4\n1.5\n1.6\n1.7\n1.8\n1.9\n2\n2.1\n2.2\n2.3\n2.4\n2.5\n2.6\n2.7\n2.8\n2.9\n3\n3.1\n3.2\n3.3\n3.4\n3.5\n3.6\n3.7\n3.8\n3.9\n4\n4.1\n4.2\n4.3\n4.4\n4.5\n4.6\n4.7\n4.8\n4.9\n5\n5.1\n5.2\n5.3\n5.4\n5.5\n5.6\n5.7\n5.8\n5.9\n6\n6.1\n6.2\n6.3\n6.4\n6.5\n6.6\n6.7\n6.8\n6.9\n7\n7.1\n7.2\n7.3\n7.4\n7.5\n7.6\n7.7\n7.8\n7.9\n8\n8.1\n8.2\n8.3\n8.4\n8.5\n8.6\n8.7\n8.8\n8.9\n9\n9.1\n9.2\n9.3\n9.4\n9.5\n9.6\n9.7\n9.8\n9.9\n10\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 4833,
+  "title" : "Array concatenation",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Array_concatenation",
+  "codes" : [
+    {
+      "code" : "# the comma ',' can be used to concatenate arrays:\nsub concatenateArrays(@a, @b) { \n\t@a, @b \n}\n\nmy @a1 = (1,2,3);\nmy @a2 = (2,3,4);\nconcatenateArrays(@a1,@a2).join(\", \").say;",
+      "result" : "1, 2, 3, 2, 3, 4\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 4613,
+  "title" : "Arrays",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Arrays",
+  "codes" : [
+    {
+      "code" : "my @arr;\n \npush @arr, 1;\npush @arr, 3;\n \n@arr[0] = 2;\n \nsay @arr[0];",
+      "result" : "2\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 9898,
+  "title" : "Aspect Oriented Programming",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Aspect_Oriented_Programming",
+  "codes" : [ ]
+}
+,{
+  "id" : 3353,
+  "title" : "Assertions",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Assertions",
+  "codes" : [
+    {
+      "code" : "my $a = (1..100).pick;\n\n# with a (non-hygienic) macro\nmacro assert ($x) { \"$x or die 'assertion failed: $x'\" }\nassert('$a == 42');\n\n# but usually we just say\n$a == 42 or die '$a ain\\'t 42';",
+      "result" : "FAIL: Too few positionals passed; expected 3 arguments but got 2",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 1642,
+  "title" : "Associative array/Creation",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Associative_array/Creation",
+  "codes" : [
+    {
+      "code" : "my %h1 = key1 => 'val1', 'key-2' => 2, three => -238.83, 4 => 'val3';\nmy %h2 = 'key1', 'val1', 'key-2', 2, 'three', -238.83, 4, 'val3';",
+      "result" : null,
+      "time" : "TODO"
+    },
+    {
+      "code" : "my @a = 1..5;\nmy @b = 'a'..'e';\nmy %h = @a Z=> @b;",
+      "result" : null,
+      "time" : "TODO"
+    },
+    {
+      "code" : "say %h1{'key1'};\nsay %h1<key1>;\n%h1<key1> = 'val1';\n%h1<key1 three> = 'val1', -238.83;",
+      "result" : "FAIL: Variable '%h1' is not declared",
+      "time" : "TODO"
+    },
+    {
+      "code" : "my $h = {key1 => 'val1', 'key-2' => 2, three => -238.83, 4 => 'val3'};\nsay $h<key1>;",
+      "result" : "val1\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 4633,
+  "title" : "Associative array/Iteration",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Associative_array/Iteration",
+  "codes" : [
+    {
+      "code" : "my %pairs = hello => 13, world => 31, '!' => 71;\n \nfor %pairs.kv -> $k, $v {\n    say \"(k,v) = ($k, $v)\";\n}\n\n{ say \"$^a => $^b\" } for %pairs.kv;\n\nsay \"key = $_\" for %pairs.keys;\n\nsay \"value = $_\" for %pairs.values;",
+      "result" : "(k,v) = (hello, 13)\n(k,v) = (world, 31)\n(k,v) = (!, 71)\nhello => 13\nworld => 31\n! => 71\nkey = hello\nkey = world\nkey = !\nvalue = 13\nvalue = 31\nvalue = 71\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 12743,
+  "title" : "Average loop length",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Average_loop_length",
+  "codes" : [
+    {
+      "code" : "constant MAX_N  = 20;\nconstant TRIALS = 100;\n \nfor 1 .. MAX_N -> $N {\n    my $empiric = TRIALS R/ [+] find-loop(random-mapping($N)).elems xx TRIALS;\n    my $theoric = [+]\n        map -> $k { $N ** ($k + 1) R/ [*] $k**2, $N - $k + 1 .. $N }, 1 .. $N;\n \n    FIRST say \" N    empiric      theoric      (error)\";\n    FIRST say \"===  =========  ============  =========\";\n \n    printf \"%3d  %9.4f  %12.4f    (%4.2f%%)\\\n\",\n            $N,  $empiric,\n                        $theoric, 100 * abs($theoric - $empiric) / $theoric;\n}\n \nsub random-mapping { hash .list Z=> .roll given ^$^size }\nsub find-loop { 0, %^mapping{*} ...^ { (state %){$_}++ } }",
+      "result" : null,
+      "time" : "timed out"
+    }
+  ]
+}
+
+,{
+  "id" : 2412,
+  "title" : "Averages/Arithmetic mean",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Averages/Arithmetic_mean",
+  "codes" : [
+    {
+      "code" : "sub mean (@a) { ([+] @a) / (@a || 1) }",
+      "result" : null,
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 11983,
+  "title" : "Averages/Mean angle",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Averages/Mean_angle",
+  "codes" : [
+    {
+      "code" : "sub deg2rad { $^d * pi / 180 }\nsub rad2deg { $^r * 180 / pi }\nsub phase ($c)  {\n    my ($mag,$ang) = $c.polar;\n    return NaN if $mag < 1e-16;\n    $ang;\n}\n\nsub meanAngle { rad2deg phase [+] map { cis deg2rad $_ }, @^angles }\n\nsay meanAngle($_).fmt(\"%.2f\\\tis the mean angle of \"), $_ for\n    [350, 10],\n    [90, 180, 270, 360],\n    [10, 20, 30];",
+      "result" : "-0.00\tis the mean angle of 350 10\n0.00\tis the mean angle of 90 180 270 360\n20.00\tis the mean angle of 10 20 30\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 11986,
+  "title" : "Averages/Mean time of day",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Averages/Mean_time_of_day",
+  "codes" : [
+    {
+      "code" : "sub tod2rad($_) { [+](.comb(/\\d+/) Z* 3600,60,1) * pi / 43200 }\n\nsub rad2tod ($r) {\n    my $x = $r * 43200 / pi;\n    (($x xx 3 Z/ 3600,60,1) Z% 24,60,60).fmt('%02d',':');\n}\n\nsub phase ($c) { $c.polar[1] }\n\nsub mean-time (@t) { rad2tod phase [+] map { cis tod2rad $_ }, @t }\n\nsay mean-time($_).fmt(\"%s is the mean time of \"), $_ for\n    [\"23:00:17\", \"23:40:20\", \"00:12:45\", \"00:17:19\"];",
+      "result" : "23:47:43 is the mean time of 23:00:17 23:40:20 00:12:45 00:17:19\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 4376,
+  "title" : "Averages/Median",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Averages/Median",
+  "codes" : [
+    {
+      "code" : "sub median {\n  my @a = sort @_;\n  return (@a[@a.end / 2] + @a[@a / 2]) / 2;\n}",
+      "result" : null,
+      "time" : "TODO"
+    },
+    {
+      "code" : "sub median { 2 R/ [+] @_.sort[@_.end / 2, @_ / 2] }",
+      "result" : null,
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 4377,
+  "title" : "Averages/Mode",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Averages/Mode",
+  "codes" : [
+    {
+      "code" : "sub mode (@a) {\n    my %counts;\n    ++%counts{$_} for @a;\n    my $max = [max] values %counts;\n    return map { .key }, grep { .value == $max }, %counts.pairs;\n}",
+      "result" : null,
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 6095,
+  "title" : "Averages/Pythagorean means",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Averages/Pythagorean_means",
+  "codes" : [
+    {
+      "code" : "sub A { ([+] @_) / @_ }\nsub G { ([*] @_) ** (1 / @_) }\nsub H { @_ / [+] 1 X/ @_ }\n\nsay \"A(1,...,10) = \", A(1..10);\nsay \"G(1,...,10) = \", G(1..10);\nsay \"H(1,...,10) = \", H(1..10);\n",
+      "result" : "A(1,...,10) = 5.5\nG(1,...,10) = 4.52872868811677\nH(1,...,10) = 3.414172\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 6099,
+  "title" : "Averages/Root mean square",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Averages/Root_mean_square",
+  "codes" : [
+    {
+      "code" : "sub rms(*@nums) { sqrt [+](@nums X** 2) / @nums }\n\nsay rms 1..10;",
+      "result" : "6.20483682299543\n",
+      "time" : "TODO"
+    },
+    {
+      "code" : "sub rms { sqrt @_ R/ [+] @_ X** 2 }",
+      "result" : null,
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 4400,
+  "title" : "Averages/Simple moving average",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Averages/Simple_moving_average",
+  "codes" : [
+    {
+      "code" : "sub sma(Int \\P where * > 0) returns Sub {\n    sub ($x) {\n        state @a = 0 xx P;\n        @a.push($x).shift;\n        P R/ [+] @a;\n    }\n}",
+      "result" : null,
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 9279,
+  "title" : "Balanced brackets",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Balanced_brackets",
+  "codes" : [
+    {
+      "code" : "sub balanced($s) {\n    my $l = 0;\n    for $s.comb {\n        when \"]\" {\n            --$l;\n            return False if $l < 0;\n        }\n        when \"[\" {\n            ++$l;\n        }\n    }\n    return $l == 0;\n}\n\nmy $n = prompt \"Number of brackets\";\nmy $s = (<[ ]> xx $n).pick(*).join;\nsay \"$s {balanced($s) ?? \"is\" !! \"is not\"} well-balanced\"",
+      "result" : "FAIL: No such method 'flush' for invocant of type '<anon>'",
+      "time" : "TODO"
+    },
+    {
+      "code" : "sub balanced($s) {\n    .none < 0 and .[*-1] == 0\n        given [\\+] '\\\\' \\u00ableg\\u00ab $s.comb;\n}\n\nmy $n = prompt \"Number of bracket pairs: \";\nmy $s = <[ ]>.roll($n*2).join;\nsay \"$s { balanced($s) ?? \"is\" !! \"is not\" } well-balanced\"",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    },
+    {
+      "code" : "sub balanced($_ is copy) {\n    () while s:g/'[]'//;\n    $_ eq '';\n}\n\nmy $n = prompt \"Number of bracket pairs: \";\nmy $s = <[ ]>.roll($n*2).join;\nsay \"$s is\", ' not' xx not balanced($s)), \" well-balanced\";",
+      "result" : "FAIL: Unexpected closing bracket",
+      "time" : "TODO"
+    },
+    {
+      "code" : "grammar BalBrack { token TOP { '[' <TOP>* ']' } }\n\nmy $n = prompt \"Number of bracket pairs: \";\nmy $s = ('[' xx $n, ']' xx $n).pick(*).join;\nsay \"$s { BalBrack.parse($s) ?? \"is\" !! \"is not\" } well-balanced\";",
+      "result" : "FAIL: No such method 'flush' for invocant of type '<anon>'",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 10748,
+  "title" : "Balanced ternary",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Balanced_ternary",
+  "codes" : [
+    {
+      "code" : "class BT {\n    has @.coeff;\n\n    my %co2bt = '-1' => '-', '0' => '0', '1' => '+';\n    my %bt2co = %co2bt.invert;\n\n    multi method new (Str $s) {\n\tself.bless(*, coeff => %bt2co{$s.flip.comb});\n    }\n    multi method new (Int $i where $i >= 0) {\n\tself.bless(*, coeff => carry $i.base(3).comb.reverse);\n    }\n    multi method new (Int $i where $i < 0) {\n\tself.new(-$i).neg;\n    }\n\n    method Str () { %co2bt{@!coeff}.join.flip }\n    method Int () { [+] @!coeff Z* (1,3,9...*) }\n\n    multi method neg () {\n\tself.new: coeff => carry self.coeff X* -1;\n    }\n}\n\nsub carry (*@digits is copy) {\n    loop (my $i = 0; $i < @digits; $i++) {\n\twhile @digits[$i] < -1 { @digits[$i] += 3; @digits[$i+1]--; }\n\twhile @digits[$i] > 1  { @digits[$i] -= 3; @digits[$i+1]++; }\n    }\n    pop @digits while @digits and not @digits[*-1];\n    @digits;\n}\n\nmulti prefix:<-> (BT $x) { $x.neg }\n\nmulti infix:<+> (BT $x, BT $y) {\n    my ($b,$a) = sort +*.coeff, $x, $y;\n    BT.new: coeff => carry $a.coeff Z+ $b.coeff, 0 xx *;\n}\n\nmulti infix:<-> (BT $x, BT $y) { $x + $y.neg }\n\nmulti infix:<*> (BT $x, BT $y) {\n    my @x = $x.coeff;\n    my @y = $y.coeff;\n    my @z = 0 xx @x+@y-1;\n    my @safe;\n    for @x -> $xd {\n\t@z = @z Z+ (@y X* $xd), 0 xx *;\n\t@safe.push: @z.shift;\n    }\n    BT.new: coeff => carry @safe, @z;\n}\n\nmy $a = BT.new: \"+-0++0+\";\nmy $b = BT.new: -436;\nmy $c = BT.new: \"+-++-\";\nmy $x = $a * ( $b - $c );\n\nsay 'a == ', $a.Int;\nsay 'b == ', $b.Int;\nsay 'c == ', $c.Int;\nsay \"a \\u00d7 (b \\u2212 c) == \", ~$x, ' == ', $x.Int;",
+      "result" : "FAIL: Unrecognized backslash sequence: '\\u'\nUnrecognized backslash sequence: '\\u'",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 16043,
+  "title" : "Base64 encode data",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Base64_encode_data",
+  "codes" : [
+    {
+      "code" : "sub MAIN {\n    my $buf = slurp(\"/tmp/favicon.ico\", :bin);\n    say buf-to-Base64($buf);\n}\n\nmy @base64map = 'A' .. 'Z', 'a' .. 'z', ^10, '+', '/';\n\nsub buf-to-Base64($buf) {\n    join '', gather for $buf.list -> $a, $b = [], $c = [] {\n        my $triplet = ($a +< 16) +| ($b +< 8) +| $c;\n        take @base64map[($triplet +> (6 * 3)) +& 0x3F];\n        take @base64map[($triplet +> (6 * 2)) +& 0x3F];\n        if $c.elems {\n            take @base64map[($triplet +> (6 * 1)) +& 0x3F];\n            take @base64map[($triplet +> (6 * 0)) +& 0x3F];\n        }\n        elsif $b.elems {\n            take @base64map[($triplet +> (6 * 1)) +& 0x3F];\n            take '=';\n        }\n        else { take '==' }\n    }\n}",
+      "result" : "FAIL: Failed to open file: no such file or directory",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 13417,
+  "title" : "Benford's law",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Benford's_law",
+  "codes" : [
+    {
+      "code" : "sub benford(@a) { bag +\\u00ab @a\u00bb.comb: /<( <[ 1..9 ]> )> <[ , . \\d ]>*/ }\n\nsub show(%distribution) {\n    printf \"%9s %9s  %s\\\n\", <Actual Expected Deviation>;\n    for 1 .. 9 -> $digit {\n        my $actual = %distribution{$digit} * 100 / [+] %distribution.values;\n        my $expected = (1 + 1 / $digit).log(10) * 100;\n        printf \"%d: %5.2f%% | %5.2f%% | %.2f%%\\\n\",\n          $digit, $actual, $expected, abs($expected - $actual);\n    }\n}\n\nmulti MAIN($file) { show benford $file.IO.lines }\nmulti MAIN() { show benford ( 1, 1, 2, *+* ... * )[^1000] }",
+      "result" : "insecure",
+      "time" : null
+    }
+  ]
+}
+,{
+  "id" : 17350,
+  "title" : "Bernoulli numbers",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Bernoulli_numbers",
+  "codes" : [
+    {
+      "code" : "sub bernoulli($n) {\n    my @a;\n    for 0..$n -> $m {\n        @a[$m] = FatRat.new(1, $m + 1);\n        for reverse 1..$m -> $j {\n          @a[$j - 1] = $j * (@a[$j - 1] - @a[$j]);\n        }\n    }\n    return @a[0];\n}\n\nconstant @bpairs = grep *.value.so, ($_ => bernoulli($_) for 0..60);\n\nmy $width = [max] @bpairs.map: *.value.numerator.chars;\nmy $form = \"B(%2d) = \\%{$width}d/%d\\\n\";\n\nprintf $form, .key, .value.nude for @bpairs;",
+      "result" : "FAIL: Failed to open file: no such file or directory",
+      "time" : "timed out"
+    },
+    {
+      "code" : "constant bernoulli = gather {\n    my @a;\n    for 0..* -> $m {\n        @a = FatRat.new(1, $m + 1),\n                -> $prev {\n                    my $j = @a.elems;\n                    $j * (@a.shift - $prev);\n                } ... { not @a.elems }\n        take $m => @a[*-1] if @a[*-1];\n    }\n}\n\nconstant @bpairs = bernoulli[^52];\n\nmy $width = [max] @bpairs.map: *.value.numerator.chars;\nmy $form = \"B(%d)\\\t= \\%{$width}d/%d\\\n\";\n\nprintf $form, .key, .value.nude for @bpairs;",
+      "result" : "B( 0) =                                            1/1\nB( 1) =                                            1/2\nB( 2) =                                            1/6\nB( 4) =                                           -1/30\nB( 6) =                                            1/42\nB( 8) =                                           -1/30\nB(10) =                                            5/66\nB(12) =                                         -691/2730\nB(14) =                                            7/6\nB(16) =                                        -3617/510\nB(18) =                                        43867/798\nB(20) =                                      -174611/330\nB(22) =                                       854513/138\nB(24) =                                   -236364091/2730\nB(26) =                                      8553103/6\nB(28) =                                 -23749461029/870\nB(30) =                                8615841276005/14322\nB(32) =                               -7709321041217/510\nB(34) =                                2577687858367/6\nB(36) =                        -26315271553053477373/1919190\nB(38) =                             2929993913841559/6\nB(40) =                       -261082718496449122051/13530\nB(42) =                       1520097643918070802691/1806\nB(44) =                     -27833269579301024235023/690\nB(46) =                     596451111593912163277961/282\nB(48) =                -5609403368997817686249127547/46410\nB(50) =                  495057205241079648212477525/66\nB(52) =              -801165718135489957347924991853/1590\nB(54) =             29149963634884862421418123812691/798\nB(56) =          -2479392929313226753685415739663229/870\nB(58) =          84483613348880041862046775994036021/354\nB(60) = -1215233140483755572040304994079820246041491/56786730\nB(0)\t=                                                                                    1/1\nB(1)\t=                                                                                    1/2\nB(2)\t=                                                                                    1/6\nB(4)\t=                                                                                   -1/30\nB(6)\t=                                                                                    1/42\nB(8)\t=                                                                                   -1/30\nB(10)\t=                                                                                    5/66\nB(12)\t=                                                                                 -691/2730\nB(14)\t=                                                                                    7/6\nB(16)\t=                                                                                -3617/510\nB(18)\t=                                                                                43867/798\nB(20)\t=                                                                              -174611/330\nB(22)\t=                                                                               854513/138\nB(24)\t=                                                                           -236364091/2730\nB(26)\t=                                                                              8553103/6\nB(28)\t=                                                                         -23749461029/870\nB(30)\t=                                                                        8615841276005/14322\nB(32)\t=                                                                       -7709321041217/510\nB(34)\t=                                                                        2577687858367/6\nB(36)\t=                                                                -26315271553053477373/1919190\nB(38)\t=                                                                     2929993913841559/6\nB(40)\t=                                                               -261082718496449122051/13530\nB(42)\t=                                                               1520097643918070802691/1806\nB(44)\t=                                                             -27833269579301024235023/690\nB(46)\t=                                                             596451111593912163277961/282\nB(48)\t=                                                        -5609403368997817686249127547/46410\nB(50)\t=                                                          495057205241079648212477525/66\nB(52)\t=                                                      -801165718135489957347924991853/1590\nB(54)\t=                                                     29149963634884862421418123812691/798\nB(56)\t=                                                  -2479392929313226753685415739663229/870\nB(58)\t=                                                  84483613348880041862046775994036021/354\nB(60)\t=                                         -1215233140483755572040304994079820246041491/56786730\nB(62)\t=                                               12300585434086858541953039857403386151/6\nB(64)\t=                                          -106783830147866529886385444979142647942017/510\nB(66)\t=                                       1472600022126335654051619428551932342241899101/64722\nB(68)\t=                                        -78773130858718728141909149208474606244347001/30\nB(70)\t=                                    1505381347333367003803076567377857208511438160235/4686\nB(72)\t=                             -5827954961669944110438277244641067365282488301844260429/140100870\nB(74)\t=                                   34152417289221168014330073731472635186688307783087/6\nB(76)\t=                               -24655088825935372707687196040585199904365267828865801/30\nB(78)\t=                            414846365575400828295179035549542073492199375372400483487/3318\nB(80)\t=                       -4603784299479457646935574969019046849794257872751288919656867/230010\nB(82)\t=                        1677014149185145836823154509786269900207736027570253414881613/498\nB(84)\t=                 -2024576195935290360231131160111731009989917391198090877281083932477/3404310\nB(86)\t=                      660714619417678653573847847426261496277830686653388931761996983/6\nB(88)\t=              -1311426488674017507995511424019311843345750275572028644296919890574047/61410\nB(90)\t=            1179057279021082799884123351249215083775254949669647116231545215727922535/272118\nB(92)\t=           -1295585948207537527989427828538576749659341483719435143023316326829946247/1410\nB(94)\t=            1220813806579744469607301679413201203958508415202696621436215105284649447/6\nB(96)\t=   -211600449597266513097597728109824233673043954389060234150638733420050668349987259/4501770\nB(98)\t=        67908260672905495624051117546403605607342195728504487509073961249992947058239/6\nB(100)\t= -94598037819122125295227433069493721872702841533066936133385696204311395415197247711/33330\n",
+      "time" : "TODO"
+    },
+    {
+      "code" : "my sub infix:<bop>(\\prev,\\\this) { this.key => this.key * (this.value - prev.value) }\n\nconstant bernoulli = grep *.value, map { (.key => .value.[*-1]) }, do\n        0 => [FatRat.new(1,1)],\n        -> (:key($pm),:value(@pa)) {\n             $pm + 1 => [ map *.value, [\\\bop] ($pm + 2 ... 1) Z=> FatRat.new(1, $pm + 2), @pa ];\n        } ... *;",
+      "result" : "FAIL: Invalid typename 'his' in parameter declaration.",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 8971,
+  "title" : "Best shuffle",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Best_shuffle",
+  "codes" : [
+    {
+      "code" : "sub best-shuffle (Str $s) {\n    my @orig = $s.comb;\n\n    my @pos;\n    # Fill @pos with positions in the order that we want to fill\n    # them. (Once Rakudo has &roundrobin, this will be doable in\n    # one statement.)\n    {\n        my %pos = classify { @orig[$^i] }, keys @orig;\n        my @k = map *.key, sort *.value.elems, %pos;\n        while %pos {\n            for @k -> $letter {\n                %pos{$letter} or next;\n                push @pos, %pos{$letter}.pop;\n                %pos{$letter}.elems or %pos.delete: $letter;\n            }\n        }\n        @pos .= reverse;\n    }\n\n    my @letters = @orig;\n    my @new = Any xx $s.chars;\n    # Now fill in @new with @letters according to each position\n    # in @pos, but skip ahead in @letters if we can avoid\n    # matching characters that way.\n    while @letters {\n        my ($i, $p) = 0, shift @pos;\n        ++$i while @letters[$i] eq @orig[$p] and $i < @letters.end;\n        @new[$p] = splice @letters, $i, 1;\n    }\n\n    my $score = elems grep ?*, map * eq *, do @new Z @orig;\n\n    @new.join, $score;\n}\n\nprintf \"%s, %s, (%d)\\\n\", $_, best-shuffle $_\n    for <abracadabra seesaw elk grrrrrr up a>;",
+      "result" : "abracadabra, baaracrdaab, (0)\nseesaw, essewa, (0)\nelk, lke, (0)\ngrrrrrr, rgrrrrr, (5)\nup, pu, (0)\na, a, (1)\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 10041,
+  "title" : "Binary digits",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Binary_digits",
+  "codes" : [
+    {
+      "code" : "say .fmt(\"%b\") for 5, 50, 9000;",
+      "result" : "101\n110010\n10001100101000\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 2206,
+  "title" : "Binary search",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Binary_search",
+  "codes" : [
+    {
+      "code" : "sub search (@a, $x --> Int) {\n    binary_search { $x cmp @a[$^i] }, 0, @a.end\n}",
+      "result" : "FAIL: Undeclared routine:\n    binary_search used at line 2\n",
+      "time" : "TODO"
+    },
+    {
+      "code" : "sub binary_search (&p, Int $lo is copy, Int $hi is copy --> Int) {\n    until $lo > $hi {\n        my Int $mid = ($lo + $hi) div 2;\n        given p $mid {\n            when -1 { $hi = $mid - 1; } \n            when  1 { $lo = $mid + 1; }\n            default { return $mid;    }\n        }\n    }\n    fail;\n}",
+      "result" : null,
+      "time" : "TODO"
+    },
+    {
+      "code" : "sub binary_search (&p, Int $lo, Int $hi --> Int) {\n    $lo <= $hi or fail;\n    my Int $mid = ($lo + $hi) div 2;\n    given p $mid {\n        when -1 { binary_search &p, $lo,      $mid - 1 } \n        when  1 { binary_search &p, $mid + 1, $hi      }\n        default { $mid                                 }\n    }\n}",
+      "result" : null,
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 4071,
+  "title" : "Binary strings",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Binary_strings",
+  "codes" : [
+    {
+      "code" : "# Perl 6 is perfectly fine with NUL *characters* in strings:\n\nmy Str $s = 'nema' ~ 0.chr ~ 'problema!';\nsay $s;\n\n# However, Perl 6 makes a clear distinction between strings\n# (i.e. sequences of characters), like your name, or \\u2026\nmy Str $str = \"My God, it's full of chars!\";\n# \\u2026 and sequences of bytes (called Bufs), for example a PNG image, or \\u2026\nmy Buf $buf = Buf.new(255, 0, 1, 2, 3);\nsay $buf;\n\n# Strs can be encoded into Bufs \\u2026\nmy Buf $this = 'foo'.encode('ascii');\n# \\u2026 and Bufs can be decoded into Strs \\u2026\nmy Str $that = $this.decode('ascii');\n\n# So it's all there. Nevertheless, let's solve this task explicitly\n# in order to see some nice language features:\n\n# We define a class \\u2026\nclass ByteStr {\n    # \\u2026 that keeps an array of bytes, and we delegate some\n    # straight-forward stuff directly to this attribute:\n    # (Note: \"has byte @.bytes\" would be nicer, but that is\n    # not yet implemented in rakudo or niecza.)\n    has Int @.bytes handles(< Bool elems gist push >);\n\n    # A handful of methods \\u2026\n    method clone() {\n        self.new(:@.bytes);\n    }\n\n    method substr(Int $pos, Int $length) {\n        self.new(:bytes(@.bytes[$pos .. $pos + $length - 1]));\n    }\n\n    method replace(*@substitutions) {\n        my %h = @substitutions;\n        @.bytes.=map: { %h{$_} // $_ }\n    }\n}\n\n# A couple of operators for our new type:\nmulti infix:<cmp>(ByteStr $x, ByteStr $y) { $x.bytes cmp $y.bytes }\nmulti infix:<~>  (ByteStr $x, ByteStr $y) { ByteStr.new(:bytes($x.bytes, $y.bytes)) }\n\n# create some byte strings (destruction not needed due to garbage collection)\nmy ByteStr $b0 = ByteStr.new;\nmy ByteStr $b1 = ByteStr.new(:bytes( 'foo'.ords, 0, 10, 'bar'.ords ));\n\n# assignment ($b1 and $b2 contain the same ByteStr object afterwards):\nmy ByteStr $b2 = $b1;\n\n# comparing:\nsay 'b0 cmp b1 = ', $b0 cmp $b1;\nsay 'b1 cmp b2 = ', $b1 cmp $b2;\n\n# cloning:\nmy $clone = $b1.clone;\n$b1.replace('o'.ord => 0);\nsay 'b1 = ', $b1;\nsay 'b2 = ', $b2;\nsay 'clone = ', $clone;\n\n# to check for (non-)emptiness we evaluate the ByteStr in boolean context:\nsay 'b0 is ', $b0 ?? 'not empty' !! 'empty';\nsay 'b1 is ', $b1 ?? 'not empty' !! 'empty';\n\n# appending a byte:\n$b1.push: 123;\n\n# extracting a substring:\nmy $sub = $b1.substr(2, 4);\nsay 'sub = ', $sub;\n\n# replacing a byte:\n$b2.replace(102 => 103);\nsay $b2;\n\n# joining:\nmy ByteStr $b3 = $b1 ~ $sub;\nsay 'joined = ', $b3;",
+      "result" : "FAIL: Type check failed in assignment to '$this'; expected 'Buf' but got 'Blob[uint8]'",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 12631,
+  "title" : "Bitcoin/address validation",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Bitcoin/address_validation",
+  "codes" : [
+    {
+      "code" : "enum B58 <\n      1 2 3 4 5 6 7 8 9\n    A B C D E F G H   J K L M N   P Q R S T U V W X Y Z\n    a b c d e f g h i j k   m n o p q r s t u v w x y z\n>;\n\nsub unbase58(Str $str) {\n    my @out = 0 xx 25;\n    for B58.enums.hash{$str.comb} {\n        my $c = $_;\n        for reverse ^25 {\n            $c += 58 * @out[$_];\n            @out[$_] = $c % 256;\n            $c div= 256;\n        }\n    }\n    return @out;\n}\n\nsub check-bitcoin-address($addr) {\n    use Digest::SHA;\n    my @byte = unbase58 $addr;\n    !!! 'wrong checksum' unless @byte[21..24] ~~\n    sha256(sha256 Buf.new: @byte[0..20]).subbuf(0, 4).list;\n}",
+      "result" : "FAIL: Could not find Digest::SHA in any of: /home/local/ALLEGROGROUP/filip.sergot/p6/MoarVM/install/languages/perl6/lib, /home/local/ALLEGROGROUP/filip.sergot/p6/MoarVM/install/languages/perl6/site/lib, /home/local/ALLEGROGROUP/filip.sergot/p6/MoarVM/install/languages/perl6, /home/local/ALLEGROGROUP/filip.sergot/p6/MoarVM/install/languages/perl6/site",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 12633,
+  "title" : "Bitcoin/public point to address",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Bitcoin/public_point_to_address",
+  "codes" : [
+    {
+      "code" : "use SSL::Digest;\n\nconstant BASE58 = <\n      1 2 3 4 5 6 7 8 9\n    A B C D E F G H   J K L M N   P Q R S T U V W X Y Z\n    a b c d e f g h i j k   m n o p q r s t u v w x y z\n>;\n\nsub encode(Int $n) {\n    $n < BASE58 ??\n    BASE58[$n]  !!\n    encode($n div 58) ~ BASE58[$n % 58]\n}\n\nsub public_point_to_address(Int $x is copy, Int $y is copy) {\n    my @bytes;\n    for 1 .. 32 { push @bytes, $y % 256; $y div= 256 }\n    for 1 .. 32 { push @bytes, $x % 256; $x div= 256 }\n    my $hash = rmd160 sha256 Blob.new: 4, @bytes.reverse;\n    my $checksum = sha256(sha256 Blob.new: 0, $hash.list).subbuf: 0, 4;\n    encode reduce * * 256 + * , 0, ($hash, $checksum)\u00bb.list \n}\n\nsay public_point_to_address\n0x50863AD64A87AE8A2FE83C1AF1A8403CB53F53E486D8511DAD8A04887E5B2352,\n0x2CD470243453A299FA9E77237716103ABC11A1DF38855ED6F2EE187E9C582BA6;",
+      "result" : "FAIL: Could not find SSL::Digest in any of: /home/local/ALLEGROGROUP/filip.sergot/p6/MoarVM/install/languages/perl6/lib, /home/local/ALLEGROGROUP/filip.sergot/p6/MoarVM/install/languages/perl6/site/lib, /home/local/ALLEGROGROUP/filip.sergot/p6/MoarVM/install/languages/perl6, /home/local/ALLEGROGROUP/filip.sergot/p6/MoarVM/install/languages/perl6/site",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 3212,
+  "title" : "Bitmap",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Bitmap",
+  "codes" : [
+    {
+      "code" : "class Pixel { has Int ($.R, $.G, $.B) }\nclass Bitmap {\n    has Int ($.width, $.height);\n    has Pixel @.data;\n\n    method fill(Pixel $p) {\n\tfor ^$!width X ^$!height -> $i, $j {\n\t    self.pixel($i, $j) = $p.clone;\n\t}\n    }\n    method pixel(\n\t$i where $i ~~ ^self.width,\n\t$j where $j ~~ ^self.height\n\t--> Pixel\n    ) is rw { @!data[$i*$!height + $j] }\n\n    method set-pixel ($i, $j, Pixel $p) {\n\tself.pixel($i, $j) = $p.clone;\n    }\n    method get-pixel ($i, $j) returns Pixel {\n\tself.pixel($i, $j);\n    }\n}\n\nmy Bitmap $b = Bitmap.new( width => 10, height => 10);\n\n$b.fill( Pixel.new( R => 0, G => 0, B => 200) );\n\n$b.set-pixel( 7, 5, Pixel.new( R => 100, G => 200, B => 0) );\n\nsay $b.perl;",
+      "result" : "Bitmap.new(width => 10, height => 10, data => Array[Pixel].new(Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 100, G => 200, B => 0), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200), Pixel.new(R => 0, G => 0, B => 200)))\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 3214,
+  "title" : "Bitmap/Bresenham's line algorithm",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Bitmap/Bresenham's_line_algorithm",
+  "codes" : [
+    {
+      "code" : "sub line(Bitmap $bitmap, $x0 is copy, $x1 is copy, $y0 is copy, $y1 is copy) {\n    my $steep = abs($y1 - $y0) > abs($x1 - $x0);\n    if $steep {\n        ($x0, $y0) = ($y0, $x0);\n        ($x1, $y1) = ($y1, $x1);\n    } \n    if $x0 > $x1 {\n        ($x0, $x1) = ($x1, $x0);\n        ($y0, $y1) = ($y1, $y0);\n    }\n    my $\\u0394x = $x1 - $x0;\n    my $\\u0394y = abs($y1 - $y0);\n    my $error = 0;\n    my $\\u0394error = $\\u0394y / $\\u0394x;\n    my $y-step = $y0 < $y1 ?? 1 !! -1;\n    my $y = $y0;\n    for $x0 .. $x1 -> $x {\n        my $pix = Pixel.new(R => 100, G => 200, B => 0); \n        if $steep {\n            $bitmap.set-pixel($y, $x, $pix);\n        } else {\n            $bitmap.set-pixel($x, $y, $pix);\n        } \n        $error += $\\u0394error;\n        if $error >= 0.5 {\n            $y += $y-step;\n            $error -= 1.0;\n        } \n    } \n}",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 3218,
+  "title" : "Bitmap/Midpoint circle algorithm",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Bitmap/Midpoint_circle_algorithm",
+  "codes" : [
+    {
+      "code" : "use MONKEY_TYPING;\naugment class Pixel { method Str { \"$.R $.G $.B\" } }\naugment class Bitmap {\n    method P3 {\n        join \"\\\n\", \\u00abP3 \"$.width $.height\" 255\u00bb,\n        do for ^$.height { join ' ', @.data[]\u00bb[$_] }\n    }\n    method raster-circle ( $x0, $y0, $r, Pixel $value ) {\n        my $f = 1 - $r;\n        my $ddF_x = 0;\n        my $ddF_y = -2 * $r;\n        my ($x, $y) = 0, $r;\n        self.set-pixel($x0, $y0 + $r, $value);\n        self.set-pixel($x0, $y0 - $r, $value);\n        self.set-pixel($x0 + $r, $y0, $value);\n        self.set-pixel($x0 - $r, $y0, $value);\n        while $x < $y {\n            if $f >= 0 {\n                $y--;\n                $ddF_y += 2;\n                $f += $ddF_y;\n            }\n            $x++;\n            $ddF_x += 2;\n            $f += $ddF_x + 1;    \n            self.set-pixel($x0 + $x, $y0 + $y, $value);\n            self.set-pixel($x0 - $x, $y0 + $y, $value);\n            self.set-pixel($x0 + $x, $y0 - $y, $value);\n            self.set-pixel($x0 - $x, $y0 - $y, $value);\n            self.set-pixel($x0 + $y, $y0 + $x, $value);\n            self.set-pixel($x0 - $y, $y0 + $x, $value);\n            self.set-pixel($x0 + $y, $y0 - $x, $value);\n            self.set-pixel($x0 - $y, $y0 - $x, $value);\n        }\n    }\n}",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 3216,
+  "title" : "Bitmap/Write a PPM file",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Bitmap/Write_a_PPM_file",
+  "codes" : [
+    {
+      "code" : "role PPM {\n    method P6 returns Blob {\n\t\"P6\\\n{self.width} {self.height}\\\n255\\\n\".encode('ascii')\n\t~ Blob.new: flat map { .R, .G, .B }, self.data\n    }\n}\nmy Bitmap $b = Bitmap.new( width => 125, height => 125) but PPM;\nfor ^$b.height X ^$b.width -> $i, $j {\n    $b.pixel($i, $j) = Pixel.new: :R($i*2), :G($j*2), :B(255-$i*2);\n}\n\n$*OUT.write: $b.P6;",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "timed out"
+    }
+  ]
+}
+,{
+  "id" : 3266,
+  "title" : "Bitwise IO",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Bitwise_IO",
+  "codes" : [
+    {
+      "code" : "sub encode-ascii(Str $s) {\n    my @b = $s.ords\u00bb.fmt(\"%07b\")\u00bb.comb;\n    @b.push(0) until @b %% 8;   # padding\n    Buf.new: gather while @b { take reduce * *2+*, (@b.pop for ^8) }\n}\n\nsub decode-ascii(Buf $b) {\n    my @b = $b.list\u00bb.fmt(\"%08b\")\u00bb.comb;\n    @b.shift until @b %% 7;   # remove padding\n    @b = gather while @b { take reduce * *2+*, (@b.pop for ^7) }\n    return [~] @b\u00bb.chr;\n}\nsay my $encode = encode-ascii 'STRING';\nsay decode-ascii $encode;",
+      "result" : "Buf:0x<03 8b 99 29 4a e5>\nSTRING\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 2251,
+  "title" : "Bitwise operations",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Bitwise_operations",
+  "codes" : [
+    {
+      "code" : "sub bool ($a, $b) {\n    say 'Coerce to Boolean';\n    say_bool_buff \"$a and $b\", $a ?& $b;\n    say_bool_buff \"$a or $b\",  $a ?| $b;\n    say_bool_buff \"$a xor $b\", $a ?^ $b;\n    say_bool_buff \"not $a\", !$a;\n}\n\nsub buf ($a, $b) {\n    say 'Coerce to Buffer';\n    say_bool_buff \"$a and $b\", $a ~& $b;\n    say_bool_buff \"$a or $b\",  $a ~| $b;\n    say_bool_buff \"$a xor $b\", $a ~^ $b;\n#   say_bool_buff \"$a bit shift right $b\", $a ~> $b; #NYI in Rakudo\n#   say_bool_buff \"$a bit shift left $b\", $a ~< $b;  #NYI in Rakudo\n}\n\nsub int ($a, $b) {\n    say 'Coerce to Int';\n    say_bit \"$a and $b\", $a +& $b;\n    say_bit \"$a or $b\",  $a +| $b;\n    say_bit \"$a xor $b\", $a +^ $b;\n    say_bit \"$a signed bit shift right $b\", $a +> $b;\n#   say_bit \"$a unsigned bit shift right $b\", $a +> $b :unsigned; #NYI in Rakudo\n#   say_bit \"$a rotate right $b\", $a +> $b :rotate;               #NYI in Rakudo\n    say_bit \"$a bit shift left $b\", $a +< $b;\n#   say_bit \"$a rotate shift left $b\", $a +< $b :rotate;          #NYI in Rakudo\n    say_bit \"twos complement not $a\", +^$a;\n\n}\n\nbool(7,2);\nsay '-' x 80;\nbuf(7,2);\nsay '-' x 80;\nint(7,2);\nsay '-' x 80;\n\n\nsub say_bit ($message, $value) {\n    my $INTSIZE = $*VM{'config'}{'intvalsize'} * 8; # hack to get native Int size\n    printf(\"%30s: %4d, %032b\\\n\", $message, $value, $value) if $INTSIZE == 32;\n    printf(\"%30s: %4d, %064b\\\n\", $message, $value, $value) if $INTSIZE == 64;\n}\n\nsub say_bool_buff ($message, $value) {\n    printf(\"%30s: %4d, %s\\\n\", $message, $value, $value);\n}",
+      "result" : "FAIL: Cannot convert string to number: base-10 number must begin with valid digits or '.' in '\u23cf\u0005' (indicated by \u23cf)",
+      "time" : "TODO"
+    },
+    {
+      "code" : "sub infix:<bsr>( $a, $b, :$rotate, :$unsigned ) {\n    if $rotate {\n        my $INTSIZE = $*VM{'config'}{'intvalsize'} * 8; # hack to get native Int size\n        my $c = $b % $INTSIZE;\n        return pir::lsr__III($a, $c) +| pir::shl__III((2**$c-1) +& $a, $INTSIZE-$c);\n    }\n    if $unsigned {\n        return pir::lsr__III($a, $b);\n    }\n    pir::shr__III($a, $b);\n}\n\nsub infix:<bsl>( $a, $b, :$rotate, :$unsigned ) {\n    if $rotate {\n        my $INTSIZE = $*VM{'config'}{'intvalsize'} * 8; # hack to get native Int size\n        my $c = $b % $INTSIZE;\n        return pir::shl__III($a, $c) +| pir::lsr__III($a, $INTSIZE-$c);\n    }\n    pir::shl__III($a, $b);\n}\n\nbs_int(7,2);\n\nsub bs_int ($a, $b) {\n    say_bit \"$a Signed Bit shift right $b\", $a bsr $b;\n    say_bit \"$a Unsigned Bit shift right $b\", infix:<bsr>($a,  $b, :unsigned);\n    say_bit \"$a Rotate right $b\", infix:<bsr>($a, $b, :rotate);\n    say_bit \"$a Bit shift left $b\", $a bsl $b;\n    say_bit \"$a Rotate left $b\", infix:<bsl>($a, $b, :rotate);\n}",
+      "result" : "FAIL: Undeclared routine:\n    say_bit used at lines 25, 26, 27, 28, 29\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 4490,
+  "title" : "Boolean values",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Boolean_values",
+  "codes" : [
+    {
+      "code" : "my Bool $crashed = False;\nmy $val = 0 but True;",
+      "result" : null,
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 9399,
+  "title" : "Box the compass",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Box_the_compass",
+  "codes" : [
+    {
+      "code" : "sub point (Int $index) {\n    my $ix = $index % 32;\n    if $ix +& 1\n        { \"&point(($ix + 1) +& 28) by &point(((2 - ($ix +& 2)) * 4) + $ix +& 24)\" }\n    elsif $ix +& 2\n        { \"&point(($ix + 2) +& 24)-&point(($ix +| 4) +& 28)\" }\n    elsif $ix +& 4\n        { \"&point(($ix + 8) +& 16)&point(($ix +| 8) +& 24)\" }\n    else\n        { <north east south west>[$ix div 8]; }\n}\n\nsub test-angle ($ix) { $ix * 11.25 + (0, 5.62, -5.62)[ $ix % 3 ] }\nsub angle-to-point(\\\\ud835\\udf3d) { floor \\ud835\\udf3d / 360 * 32 + 0.5 }\n\nfor 0 .. 32 -> $ix {\n    my \\\\ud835\\udf3d = test-angle($ix);\n    printf \"  %2d %6.2f\\u00b0 %s\\\n\",\n              $ix % 32 + 1,\n                  \\ud835\\udf3d,\n                         tc point angle-to-point \\ud835\\udf3d;\n}",
+      "result" : "FAIL: Missing block",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 17127,
+  "title" : "Brace expansion",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Brace_expansion",
+  "codes" : [
+    {
+      "code" : "grammar BraceExpansion {\n    token TOP  { ( <meta> | . )* }\n    token meta { '{' <alts> '}' | \\\\ .  }\n    token alts { <alt>+ % ',' }\n    token alt  { ( <meta> | <-[ , } ]> )* }\n}\n\nsub crosswalk($/) {\n    [X~] '', $0.map: -> $/ { ([$<meta><alts><alt>.&alternatives]) or ~$/ }\n}\n\nsub alternatives($_) {\n    when :not { () }\n    when 1    { '{' X~ $_\u00bb.&crosswalk X~ '}' }\n    default   { $_\u00bb.&crosswalk }\n}\n\nsub brace-expand($s) { crosswalk BraceExpansion.parse($s) }",
+      "result" : null,
+      "time" : "TODO"
+    },
+    {
+      "code" : "sub bxtest(*@s) {\n    for @s -> $s {\n        say \"\\\n$s\";\n        for brace-expand($s) {\n            say \"    \", $_;\n        }\n    }\n}\n\nbxtest Q:to/END/.lines;\n    ~/{Downloads,Pictures}/*.{jpg,gif,png}\n    It{{em,alic}iz,erat}e{d,}, please.\n    {,{,gotta have{ ,\\, again\\, }}more }cowbell!\n    {}} some {\\\\{edge,edgy} }{ cases, here\\\\\\}\n    a{b{1,2}c\n    a{1,2}b}c\n    a{1,{2},3}b\n    a{b{1,2}c{}}\n    more{ darn{ cowbell,},}\n    ab{c,d\\,e{f,g\\h},i\\,j{k,l\\,m}n,o\\,p}qr\n    {a,{\\,b}c\n    a{b,{{c}}\n    {a{\\}b,c}d\n    {a,b{{1,2}e}f\n    END",
+      "result" : "insecure",
+      "time" : null
+    }
+  ]
+}
+,{
+  "id" : 10244,
+  "title" : "Break OO privacy",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Break_OO_privacy",
+  "codes" : [
+    {
+      "code" : "class Foo {\n    has $!shyguy = 42;\n}\nmy Foo $foo .= new;\n\nsay $foo.^attributes.first('$!shyguy').get_value($foo);",
+      "result" : "42\n",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 7145,
+  "title" : "Brownian tree",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Brownian_tree",
+  "codes" : [
+    {
+      "code" : "constant size = 100;\nconstant particlenum = 1_000;\n\n\nconstant mid = size div 2;\n\nmy $spawnradius = 5;\nmy @map;\n\nsub set($x, $y) {\n    @map[$x][$y] = True;\n}\n\nsub get($x, $y) {\n    return @map[$x][$y] || False;\n}\n\nset(mid, mid);\nmy @blocks = \" \",\"\\c[UPPER HALF BLOCK]\", \"\\c[LOWER HALF BLOCK]\",\"\\c[FULL BLOCK]\";\n\nsub infix:<\\u2588>($a, $b) {\n    @blocks[$a + 2 * $b]\n}\n\nsub display {\n    my $start = 0;\n    my $end = size;\n    say (for $start, $start + 2 ... $end -> $y {\n        (for $start..$end -> $x {\n            if abs(($x&$y) - mid) < $spawnradius {\n                get($x, $y) \\u2588 get($x, $y+1);\n            } else {\n                \" \"\n            }\n        }).join\n    }).join(\"\\\n\")\n}\n\nfor ^particlenum -> $progress {\n    my Int $x;\n    my Int $y;\n    my &reset = {\n        repeat {\n            ($x, $y) = (mid - $spawnradius..mid + $spawnradius).pick, (mid - $spawnradius, mid + $spawnradius).pick;\n            ($x, $y) = ($y, $x) if (True, False).pick();\n        } while get($x,$y);\n    }\n    reset;\n\n    while not get($x-1|$x|$x+1, $y-1|$y|$y+1) {\n        $x = ($x-1, $x, $x+1).pick;\n        $y = ($y-1, $y, $y+1).pick;\n        if (False xx 3, True).pick {\n            $x = $x >= mid ?? $x - 1 !! $x + 1;\n            $y = $y >= mid ?? $y - 1 !! $y + 1;\n        }\n        if abs(($x | $y) - mid) > $spawnradius {\n            reset;\n        }\n    }\n    set($x,$y);\n    display if $progress %% 50;\n    if $spawnradius < mid && abs(($x|$y) - mid) > $spawnradius - 5 {\n        $spawnradius = $spawnradius + 1;\n    }\n}\n\nsay \"\";\ndisplay;\nsay \"\";\nsay \"time elapsed: \", (now - BEGIN { now }).Num.fmt(\"%.2f\"), \" seconds\";\nsay \"\";",
+      "result" : null,
+      "time" : "timed out"
+    }
+  ]
+}
+,{
+  "id" : 4126,
+  "title" : "Bulls and cows",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Bulls_and_cows",
+  "codes" : [
+    {
+      "code" : "my $size = 4;\nmy @secret = pick $size, '1' .. '9';\n\nfor 1..* -> $guesses {\n    my @guess;\n    loop {\n        @guess = (prompt(\"Guess $guesses: \") // exit).comb;\n        last if @guess == $size and\n            all(@guess) eq one(@guess) & any('1' .. '9');\n        say 'Malformed guess; try again.';\n    }\n    my ($bulls, $cows) = 0, 0;\n    for ^$size {\n        when @guess[$_] eq @secret[$_] { ++$bulls; }\n        when @guess[$_] eq any @secret { ++$cows; }\n    }\n    last if $bulls == $size;\n    say \"$bulls bulls, $cows cows.\";\n}\n\nsay 'A winner is you!';",
+      "result" : "FAIL: No such method 'flush' for invocant of type '<anon>'",
+      "time" : "TODO"
+    }
+  ]
+}
+
+,{
+  "id" : 7508,
+  "title" : "Bulls and cows/Player",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Bulls_and_cows/Player",
+  "codes" : [ ]
+}
+,{
+  "id" : 9913,
+  "title" : "Caesar cipher",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Caesar_cipher",
+  "codes" : [
+    {
+      "code" : "my @alpha = 'A' .. 'Z';\nsub encrypt ( $key where 1..25, $plaintext ) {\n    $plaintext.trans( @alpha Z=> @alpha.rotate($key) );\n}\nsub decrypt ( $key where 1..25, $cyphertext ) {\n    $cyphertext.trans( @alpha.rotate($key) Z=> @alpha );\n}\n\nmy $original = 'THE FIVE BOXING WIZARDS JUMP QUICKLY';\nmy $en = encrypt( 13, $original );\nmy $de = decrypt( 13, $en );\n\n.say for $original, $en, $de;\n\nsay 'OK' if $original eq all( map { .&decrypt(.&encrypt($original)) }, 1..25 );",
+      "result" : null,
+      "time" : "timed out"
+    }
+  ]
+}
+,{
+  "id" : 9818,
+  "title" : "Calendar",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Calendar",
+  "codes" : [
+    {
+      "code" : "my $months-per-col = 3;\nmy @week-day-names = <Mo Tu We Th Fr Sa Su>;\nmy @month-names = <Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec>;\n\nmy Int $year = +(@*ARGS.shift || 1969);\n\nsay fmt-year($year);\nexit;\n\nsub fmt-year ($year) {\n\n        my $str = (' ' x 30) ~ $year ~ \"\\\n\";\n\n        my @month-strs;\n        @month-strs[$_] = fmt-month($year, $_).lines for 1 .. 12;\n\n        loop ( my $month = 1; $month <= 12; $month += $months-per-col ) {\n                while @month-strs[$month] {\n                        for ^$months-per-col {\n                                next unless @month-strs[$month+$_];\n                                $str ~= @month-strs[$month+$_].shift;\n                                $str ~= \" \" x 3;\n                        }\n                        $str ~= \"\\\n\";\n                }\n                $str ~= \"\\\n\";\n        }\n        return $str;\n}\nsub fmt-month ($year, $month) {\n        my $str = sprintf \"%-20s\\\n\", @month-names[$month-1];\n        $str ~= @week-day-names~\"\\\n\";\n        my $date = DateTime.new(year => $year, month => $month);\n        my $week-day = $date.day-of-week;\n\n        $str ~= (\"  \" xx $week-day-1).join(\" \");\n\n        for $date.day .. $date.days-in-month -> $day {\n\n                $date = DateTime.new(year => $year, month => $month, day => $day);\n\n                $str ~= \" \" if 1 < $week-day < 8;\n                if $week-day == 8 {\n                        $str ~= \"\\\n\";\n                        $week-day = 1;\n                }\n                $str ~= sprintf \"%2d\", $day;\n\n                $week-day++;\n        }\n        $str ~= \" \" if $week-day < 8;\n        $str ~= (\"  \" xx 8-$week-day).join(\" \");\n        $str ~= \"\\\n\";\n        return $str;\n}\n",
+      "result" : "insecure",
+      "time" : null
+    }
+  ]
+}
+
+,{
+  "id" : 9832,
+  "title" : "Calendar - for \"real\" programmers",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Calendar_-_for_\"real\"_programmers",
+  "codes" : [
+    {
+      "code" : "pageid\t9832 ns\t0 title\tCalendar - for \"real\" programmers",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+
+,{
+  "id" : 4711,
+  "title" : "Call a foreign-language function",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Call_a_foreign-language_function",
+  "codes" : [
+    {
+      "code" : "pageid\t4711 ns\t0 title\tCall a foreign-language function",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 10098,
+  "title" : "Call a function",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Call_a_function",
+  "codes" : [
+    {
+      "code" : "pageid\t10098 ns\t0 title\tCall a function",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    },
+    {
+      "code" : "pageid\t10098 ns\t0 title\tCall a function",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    },
+    {
+      "code" : "pageid\t10098 ns\t0 title\tCall a function",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    },
+    {
+      "code" : "pageid\t10098 ns\t0 title\tCall a function",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    },
+    {
+      "code" : "pageid\t10098 ns\t0 title\tCall a function",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    },
+    {
+      "code" : "pageid\t10098 ns\t0 title\tCall a function",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    },
+    {
+      "code" : "pageid\t10098 ns\t0 title\tCall a function",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    },
+    {
+      "code" : "pageid\t10098 ns\t0 title\tCall a function",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    },
+    {
+      "code" : "pageid\t10098 ns\t0 title\tCall a function",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    },
+    {
+      "code" : "pageid\t10098 ns\t0 title\tCall a function",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 3999,
+  "title" : "Call a function in a shared library",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Call_a_function_in_a_shared_library",
+  "codes" : [
+    {
+      "code" : "pageid\t3999 ns\t0 title\tCall a function in a shared library",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 10321,
+  "title" : "Call an object method",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Call_an_object_method",
+  "codes" : [
+    {
+      "code" : "pageid\t10321 ns\t0 title\tCall an object method",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 12638,
+  "title" : "Carmichael 3 strong pseudoprimes",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Carmichael_3_strong_pseudoprimes",
+  "codes" : [
+    {
+      "code" : "pageid\t12638 ns\t0 title\tCarmichael 3 strong pseudoprimes",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 9220,
+  "title" : "Case-sensitivity of identifiers",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Case-sensitivity_of_identifiers",
+  "codes" : [
+    {
+      "code" : "pageid\t9220 ns\t0 title\tCase-sensitivity of identifiers",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    },
+    {
+      "code" : "pageid\t9220 ns\t0 title\tCase-sensitivity of identifiers",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 11905,
+  "title" : "Casting out nines",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Casting_out_nines",
+  "codes" : [
+    {
+      "code" : "pageid\t11905 ns\t0 title\tCasting out nines",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 9246,
+  "title" : "Catalan numbers",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Catalan_numbers",
+  "codes" : [
+    {
+      "code" : "pageid\t9246 ns\t0 title\tCatalan numbers",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 13378,
+  "title" : "Catalan numbers/Pascal's triangle",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Catalan_numbers/Pascal's_triangle",
+  "codes" : [
+    {
+      "code" : "pageid\t13378 ns\t0 title\tCatalan numbers/Pascal's triangle",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 12312,
+  "title" : "Catamorphism",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Catamorphism",
+  "codes" : [
+    {
+      "code" : "pageid\t12312 ns\t0 title\tCatamorphism",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    },
+    {
+      "code" : "pageid\t12312 ns\t0 title\tCatamorphism",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 3118,
+  "title" : "Character codes",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Character_codes",
+  "codes" : [
+    {
+      "code" : "pageid\t3118 ns\t0 title\tCharacter codes",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 12341,
+  "title" : "Check input device is a terminal",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Check_input_device_is_a_terminal",
+  "codes" : [
+    {
+      "code" : "pageid\t12341 ns\t0 title\tCheck input device is a terminal",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 12552,
+  "title" : "Check Machin-like formulas",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Check_Machin-like_formulas",
+  "codes" : [
+    {
+      "code" : "pageid\t12552 ns\t0 title\tCheck Machin-like formulas",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 13194,
+  "title" : "Check output device is a terminal",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Check_output_device_is_a_terminal",
+  "codes" : [ ]
+}
+,{
+  "id" : 2026,
+  "title" : "Check that file exists",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Check_that_file_exists",
+  "codes" : [
+    {
+      "code" : "pageid\t2026 ns\t0 title\tCheck that file exists",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 17124,
+  "title" : "Chinese remainder theorem",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Chinese_remainder_theorem",
+  "codes" : [
+    {
+      "code" : "pageid\t17124 ns\t0 title\tChinese remainder theorem",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 9335,
+  "title" : "Cholesky decomposition",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Cholesky_decomposition",
+  "codes" : [
+    {
+      "code" : "pageid\t9335 ns\t0 title\tCholesky decomposition",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 13311,
+  "title" : "Circles of given radius through two points",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Circles_of_given_radius_through_two_points",
+  "codes" : [
+    {
+      "code" : "pageid\t13311 ns\t0 title\tCircles of given radius through two points",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    },
+    {
+      "code" : "pageid\t13311 ns\t0 title\tCircles of given radius through two points",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+,{
+  "id" : 1844,
+  "title" : "Classes",
+  "url" : "http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=Classes",
+  "codes" : [
+    {
+      "code" : "pageid\t1844 ns\t0 title\tClasses",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    },
+    {
+      "code" : "pageid\t1844 ns\t0 title\tClasses",
+      "result" : "FAIL: Two terms in a row",
+      "time" : "TODO"
+    }
+  ]
+}
+]
