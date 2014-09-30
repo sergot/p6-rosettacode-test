@@ -27,13 +27,37 @@ my @tasks;
 my $json;
 my $url = 'http://rosettacode.org/mw/api.php?action=query&list=categorymembers&cmtitle=Category:Perl_6&cmlimit=500&cmtype=page&format=json';
 
+# read the result to continue testing
+@tasks = try EVAL 'from-json("result.json".IO.slurp).map({ Task.new(:id($_<id>), :title($_<title>), :url($_<url>), :codes($_<codes>)) })';
+
+my ($file, $continue);
+if !@tasks.elems {
+    $file = open "result.json", :a;
+    $file.say: '[';
+    $file.close;
+}
+else {
+    $continue = @tasks[*-1].id;
+    my $c = 'result.json'.IO.slurp;
+    my $file = open 'result.json', :w;
+    $file.say: $c.substr(0, $c.chars - 2);
+    $file.close;
+}
+
 repeat {
     $url ~= "&cmcontinue=$json<query-continue><categorymembers><cmcontinue>"
         if $json<query-continue><categorymembers><cmcontinue>.defined;
     my $content = get($url);
     $json = from-json($content);
 
+    my $found_last = False;
     for $json<query><categorymembers>.list {
+        # next until we have last tested code
+        if $continue && !$found_last {
+            $found_last = True if $_<pageid> == $continue;
+            next;
+        }
+
         say "Running {$_<title>}";
         my $code;
 
@@ -55,6 +79,8 @@ repeat {
                 )
             }
             await Promise.anyof($p_result, $timeout);
+            $p_result.break
+                if $p_result.status eq Planned;
             $p6code.result = $p_result.result
                 if $p_result.status eq Kept;
             $p6code.time = $timeout.status eq Kept ?? 'timed out' !! 'TODO';
@@ -62,13 +88,18 @@ repeat {
         }
         my $task = Task.new(:id($_<pageid>), :title($_<title>), :@codes, :url($task_url));
 
-        my $file = open "result.json", :a;
+        $file = open "result.json", :a;
+        $file.print: ',' if @tasks.elems;
         $file.say: to-json($task.dump);
         $file.close;
 
         @tasks.push: $task;
     }
 } while $json<query-continue><categorymembers><cmcontinue>;
+
+$file = open "result.json", :a;
+$file.say: ']';
+$file.close;
 
 say "I'M DONE...";
 
@@ -89,12 +120,12 @@ sub codify(Str $s is copy) {
     $s ~~ s:g/\\\\/\\/;
 
     $s ~~ s:g/\\u00bb/»/; # »
-    $s ~~ s:g/\\\//\//; # »
+    $s ~~ s:g/\\\//\//;
     $s;
 }
 
 sub insecure(Str $code) {
-    return True if $code ~~ /lines/;
+    return True if $code ~~ /lines/; # should improve this...
     False;
 }
 
