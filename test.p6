@@ -1,3 +1,7 @@
+# this code is full of workarounds... I will try to remove them.
+# for now, you have to add ']' to result.json after every failure
+# before running it again.
+#
 use v6;
 use HTTP::UserAgent :simple;
 use IO::Capture::Simple;
@@ -51,20 +55,20 @@ repeat {
     $json = from-json($content);
 
     my $found_last = False;
-    for $json<query><categorymembers>.list {
+    for $json<query><categorymembers>.list -> $_row {
         # next until we have last tested code
         if $continue && !$found_last {
-            $found_last = True if $_<pageid> == $continue;
+            $found_last = True if $_row<pageid> == $continue;
             next;
         }
 
-        say "Running {$_<title>}";
+        say "Running {$_row<title>}";
         my $code;
 
-        my $task_url = 'http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=' ~ clearify($_<title>);
+        my $task_url = 'http://rosettacode.org/mw/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=' ~ clearify($_row<title>);
         $code = get($task_url);
 
-        my @codes = $code.match(/'<lang ' ['perl6' | 'Perl6'] '>' (.*?) '<\/lang>'/, :i, :g).map({ P6Code.new(:code(codify(~$_[0]))) });
+        my @codes = $code.match(/'<lang ' ['perl6' | 'Perl6'] '>' (.*?) '<\/lang>'/, :i, :g).map({ P6Code.new(:code(codify(~$_row[0]))) });
 
         for @codes -> $p6code {
             if insecure($p6code.code) {
@@ -86,7 +90,7 @@ repeat {
             $p6code.time = $timeout.status eq Kept ?? 'timed out' !! 'TODO';
             $p6code.result = "FAIL: $!" if $!;
         }
-        my $task = Task.new(:id($_<pageid>), :title($_<title>), :@codes, :url($task_url));
+        my $task = Task.new(:id($_row<pageid>), :title($_row<title>), :@codes, :url($task_url));
 
         $file = open "result.json", :a;
         $file.print: ',' if @tasks.elems;
